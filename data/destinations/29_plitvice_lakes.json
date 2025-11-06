@@ -1,0 +1,51 @@
+{
+  "name": "Plitvice Lakes",
+  "location": "Lika-Senj County",
+  "state": null,
+  "country": "Croatia",
+  "description": "UNESCO World Heritage site featuring 16 terraced lakes connected by waterfalls. A stunning natural wonder with crystal-clear turquoise waters.",
+  "activities": [
+    "hiking",
+    "photography",
+    "boat rides",
+    "wildlife viewing",
+    "nature walks",
+    "bird watching"
+  ],
+  "scenery": [
+    "lakes",
+    "waterfalls",
+    "forests",
+    "turquoise water",
+    "boardwalks",
+    "caves",
+    "limestone"
+  ],
+  "amenities": [
+    "hotels",
+    "campgrounds",
+    "restaurants",
+    "visitor centers",
+    "parking",
+    "shuttle buses"
+  ],
+  "best_season": ["spring", "summer", "fall"],
+  "travel_time": "2 hours from Zagreb or Zadar",
+  "nearby_attractions": [
+    "Upper Lakes",
+    "Lower Lakes",
+    "Veliki Slap",
+    "Zagreb",
+    "Zadar",
+    "Krka National Park"
+  ],
+  "keywords": [
+    "lakes",
+    "waterfalls",
+    "nature",
+    "unesco",
+    "hiking",
+    "scenic"
+  ]
+}
+

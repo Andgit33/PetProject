@@ -1,0 +1,53 @@
+{
+  "name": "Galapagos Islands",
+  "location": "Pacific Ocean",
+  "state": null,
+  "country": "Ecuador",
+  "description": "Unique archipelago known for incredible wildlife found nowhere else on Earth. A living laboratory of evolution and natural wonder.",
+  "activities": [
+    "wildlife viewing",
+    "snorkeling",
+    "diving",
+    "hiking",
+    "photography",
+    "kayaking",
+    "sailing",
+    "bird watching"
+  ],
+  "scenery": [
+    "volcanic islands",
+    "unique wildlife",
+    "crystal clear water",
+    "lava formations",
+    "beaches",
+    "craters",
+    "tropical"
+  ],
+  "amenities": [
+    "cruise ships",
+    "hotels",
+    "restaurants",
+    "dive centers",
+    "tour operators",
+    "visitor centers"
+  ],
+  "best_season": ["year round", "dry season june to december"],
+  "travel_time": "Flight to Quito, then to Baltra or San Cristobal",
+  "nearby_attractions": [
+    "Santa Cruz",
+    "Isabela",
+    "San Cristobal",
+    "Fernandina",
+    "Española",
+    "Tortuga Bay"
+  ],
+  "keywords": [
+    "wildlife",
+    "islands",
+    "unique",
+    "evolution",
+    "marine",
+    "nature"
+  ]
+}
+

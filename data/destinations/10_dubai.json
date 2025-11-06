@@ -1,0 +1,54 @@
+{
+  "name": "Dubai",
+  "location": "Emirates",
+  "state": null,
+  "country": "United Arab Emirates",
+  "description": "Ultra-modern city known for luxury shopping, futuristic architecture, and world-class entertainment. A blend of traditional Arab culture and modern innovation.",
+  "activities": [
+    "shopping",
+    "dining",
+    "desert safaris",
+    "skydiving",
+    "water parks",
+    "beach activities",
+    "nightlife",
+    "cultural tours"
+  ],
+  "scenery": [
+    "skyscrapers",
+    "desert",
+    "beaches",
+    "modern architecture",
+    "palm islands",
+    "dunes",
+    "marina"
+  ],
+  "amenities": [
+    "luxury hotels",
+    "shopping malls",
+    "restaurants",
+    "spas",
+    "beach clubs",
+    "theme parks",
+    "public transportation"
+  ],
+  "best_season": ["winter", "november to march"],
+  "travel_time": "International flights to Dubai",
+  "nearby_attractions": [
+    "Burj Khalifa",
+    "Palm Jumeirah",
+    "Burj Al Arab",
+    "Dubai Mall",
+    "Desert Safari",
+    "Dubai Marina"
+  ],
+  "keywords": [
+    "city",
+    "luxury",
+    "modern",
+    "shopping",
+    "desert",
+    "entertainment"
+  ]
+}
+

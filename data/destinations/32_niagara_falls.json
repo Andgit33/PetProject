@@ -1,0 +1,54 @@
+{
+  "name": "Niagara Falls",
+  "location": "Ontario/New York",
+  "state": "ON/NY",
+  "country": "Canada/USA",
+  "description": "Powerful waterfalls on the border between Canada and USA. One of the world's most famous natural wonders with boat tours and observation decks.",
+  "activities": [
+    "boat tours",
+    "observation decks",
+    "helicopter tours",
+    "photography",
+    "casino",
+    "dining",
+    "walking",
+    "night illumination"
+  ],
+  "scenery": [
+    "waterfalls",
+    "mist",
+    "rainbows",
+    "gorge",
+    "river",
+    "illumination",
+    "powerful"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "casinos",
+    "tour operators",
+    "visitor centers",
+    "parking",
+    "observation decks"
+  ],
+  "best_season": ["summer", "spring", "fall"],
+  "travel_time": "1.5 hours from Toronto or Buffalo",
+  "nearby_attractions": [
+    "Maid of the Mist",
+    "Journey Behind the Falls",
+    "Skylon Tower",
+    "Whirlpool Aero Car",
+    "Niagara-on-the-Lake",
+    "Toronto"
+  ],
+  "keywords": [
+    "waterfalls",
+    "natural wonder",
+    "scenic",
+    "powerful",
+    "tourist",
+    "iconic"
+  ]
+}
+

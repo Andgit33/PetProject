@@ -1,0 +1,52 @@
+{
+  "name": "Iceland Northern Lights",
+  "location": "Iceland",
+  "state": null,
+  "country": "Iceland",
+  "description": "One of the best places in the world to witness the Aurora Borealis. Combine with glaciers, geysers, and stunning natural landscapes.",
+  "activities": [
+    "northern lights viewing",
+    "photography",
+    "glacier tours",
+    "hot springs",
+    "ice cave exploration",
+    "snowmobiling",
+    "dog sledding"
+  ],
+  "scenery": [
+    "northern lights",
+    "glaciers",
+    "ice caves",
+    "snow",
+    "volcanoes",
+    "geysers",
+    "frozen landscapes"
+  ],
+  "amenities": [
+    "hotels",
+    "guesthouses",
+    "restaurants",
+    "tour operators",
+    "hot springs",
+    "visitor centers"
+  ],
+  "best_season": ["winter", "september to march"],
+  "travel_time": "Flight to Reykjavik",
+  "nearby_attractions": [
+    "Golden Circle",
+    "Blue Lagoon",
+    "Jökulsárlón",
+    "Reykjavik",
+    "Thingvellir",
+    "Geysir"
+  ],
+  "keywords": [
+    "northern lights",
+    "aurora",
+    "winter",
+    "glaciers",
+    "unique",
+    "photography"
+  ]
+}
+

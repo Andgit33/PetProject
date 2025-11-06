@@ -1,0 +1,52 @@
+{
+  "name": "Jungfraujoch",
+  "location": "Bernese Oberland",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Top of Europe - highest railway station in Europe at 3,454m. Breathtaking alpine views, ice palace, and year-round snow activities.",
+  "activities": [
+    "train rides",
+    "snow activities",
+    "ice palace",
+    "photography",
+    "hiking",
+    "skiing",
+    "snow tubing"
+  ],
+  "scenery": [
+    "alpine peaks",
+    "glaciers",
+    "snow",
+    "mountains",
+    "ice",
+    "panoramic views",
+    "dramatic"
+  ],
+  "amenities": [
+    "restaurants",
+    "shops",
+    "ice palace",
+    "observation decks",
+    "train station",
+    "hotels nearby"
+  ],
+  "best_season": ["year round"],
+  "travel_time": "Train from Interlaken",
+  "nearby_attractions": [
+    "Interlaken",
+    "Grindelwald",
+    "Lauterbrunnen",
+    "Eiger",
+    "Mönch",
+    "Jungfrau"
+  ],
+  "keywords": [
+    "alpine",
+    "glacier",
+    "train",
+    "snow",
+    "panoramic",
+    "unique"
+  ]
+}
+

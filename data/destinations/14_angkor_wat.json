@@ -1,0 +1,52 @@
+{
+  "name": "Angkor Wat",
+  "location": "Siem Reap Province",
+  "state": null,
+  "country": "Cambodia",
+  "description": "The largest religious monument in the world, a stunning temple complex from the Khmer Empire. A UNESCO World Heritage site of incredible historical significance.",
+  "activities": [
+    "temple tours",
+    "photography",
+    "sunrise viewing",
+    "cultural tours",
+    "hiking",
+    "biking",
+    "helicopter tours"
+  ],
+  "scenery": [
+    "ancient temples",
+    "jungle",
+    "moats",
+    "stone carvings",
+    "sunrise",
+    "ruins",
+    "trees"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "tour guides",
+    "bike rentals",
+    "visitor centers",
+    "markets"
+  ],
+  "best_season": ["dry season", "november to march"],
+  "travel_time": "Flight to Siem Reap",
+  "nearby_attractions": [
+    "Angkor Thom",
+    "Ta Prohm",
+    "Bayon Temple",
+    "Banteay Srei",
+    "Tonle Sap Lake",
+    "Floating villages"
+  ],
+  "keywords": [
+    "archaeological",
+    "temple",
+    "historic",
+    "unesco",
+    "cultural",
+    "ancient"
+  ]
+}
+

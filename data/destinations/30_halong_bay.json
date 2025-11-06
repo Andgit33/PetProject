@@ -1,0 +1,53 @@
+{
+  "name": "Halong Bay",
+  "location": "Quang Ninh Province",
+  "state": null,
+  "country": "Vietnam",
+  "description": "UNESCO World Heritage site with thousands of limestone karsts and isles rising from emerald waters. A mystical seascape perfect for cruising.",
+  "activities": [
+    "cruising",
+    "kayaking",
+    "cave exploring",
+    "swimming",
+    "photography",
+    "fishing",
+    "sunset viewing",
+    "cooking classes"
+  ],
+  "scenery": [
+    "limestone karsts",
+    "emerald water",
+    "caves",
+    "islands",
+    "sunset",
+    "fishing villages",
+    "mystical"
+  ],
+  "amenities": [
+    "cruise ships",
+    "hotels",
+    "restaurants",
+    "tour operators",
+    "kayak rentals",
+    "visitor centers"
+  ],
+  "best_season": ["october to april"],
+  "travel_time": "3-4 hours from Hanoi",
+  "nearby_attractions": [
+    "Sung Sot Cave",
+    "Ti Top Island",
+    "Floating villages",
+    "Cat Ba Island",
+    "Bai Tu Long Bay",
+    "Hanoi"
+  ],
+  "keywords": [
+    "bay",
+    "cruising",
+    "karsts",
+    "unesco",
+    "scenic",
+    "mystical"
+  ]
+}
+

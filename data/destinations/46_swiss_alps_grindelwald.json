@@ -1,0 +1,52 @@
+{
+  "name": "Grindelwald",
+  "location": "Bernese Oberland",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Charming alpine village surrounded by the Eiger, Mönch, and Jungfrau peaks. A paradise for hiking, skiing, and mountain lovers.",
+  "activities": [
+    "hiking",
+    "skiing",
+    "mountaineering",
+    "photography",
+    "cable car rides",
+    "climbing",
+    "paragliding"
+  ],
+  "scenery": [
+    "eiger",
+    "mönch",
+    "jungfrau",
+    "alpine meadows",
+    "glaciers",
+    "villages",
+    "dramatic"
+  ],
+  "amenities": [
+    "hotels",
+    "mountain huts",
+    "restaurants",
+    "cable cars",
+    "ski lifts",
+    "shops"
+  ],
+  "best_season": ["summer", "winter"],
+  "travel_time": "Train from Interlaken",
+  "nearby_attractions": [
+    "Eiger",
+    "First",
+    "Jungfraujoch",
+    "Grosse Scheidegg",
+    "Bachalpsee",
+    "Pfingstegg"
+  ],
+  "keywords": [
+    "alpine",
+    "hiking",
+    "mountains",
+    "charming",
+    "skiing",
+    "scenic"
+  ]
+}
+

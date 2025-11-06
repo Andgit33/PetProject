@@ -1,0 +1,51 @@
+{
+  "name": "Blue Lagoon",
+  "location": "Reykjanes Peninsula",
+  "state": null,
+  "country": "Iceland",
+  "description": "Geothermal spa with milky-blue waters rich in minerals. A unique relaxation experience in Iceland's volcanic landscape.",
+  "activities": [
+    "spa treatments",
+    "relaxation",
+    "swimming",
+    "massage",
+    "dining",
+    "photography",
+    "wellness"
+  ],
+  "scenery": [
+    "geothermal pools",
+    "lava fields",
+    "steam",
+    "volcanic landscape",
+    "milky blue water",
+    "modern architecture"
+  ],
+  "amenities": [
+    "luxury resort",
+    "spa facilities",
+    "restaurants",
+    "changing rooms",
+    "lockers",
+    "massage services"
+  ],
+  "best_season": ["year round"],
+  "travel_time": "20 minutes from Keflavik Airport",
+  "nearby_attractions": [
+    "Reykjavik",
+    "Golden Circle",
+    "Reykjanes Peninsula",
+    "Northern Lights",
+    "Geysir",
+    "Gullfoss"
+  ],
+  "keywords": [
+    "spa",
+    "geothermal",
+    "relaxation",
+    "wellness",
+    "unique",
+    "luxury"
+  ]
+}
+

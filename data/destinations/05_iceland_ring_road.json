@@ -1,0 +1,54 @@
+{
+  "name": "Iceland Ring Road",
+  "location": "Iceland",
+  "state": null,
+  "country": "Iceland",
+  "description": "A 1,332 km route circling Iceland, showcasing glaciers, geysers, waterfalls, black sand beaches, and the Northern Lights. Perfect for a road trip adventure.",
+  "activities": [
+    "road tripping",
+    "hiking",
+    "glacier tours",
+    "hot springs",
+    "northern lights viewing",
+    "photography",
+    "whale watching",
+    "ice cave exploration"
+  ],
+  "scenery": [
+    "glaciers",
+    "waterfalls",
+    "geysers",
+    "black sand beaches",
+    "volcanoes",
+    "fjords",
+    "northern lights",
+    "ice formations"
+  ],
+  "amenities": [
+    "hotels",
+    "guesthouses",
+    "campgrounds",
+    "restaurants",
+    "gas stations",
+    "visitor centers"
+  ],
+  "best_season": ["summer", "winter for northern lights"],
+  "travel_time": "Flight to Reykjavik, then car rental",
+  "nearby_attractions": [
+    "Golden Circle",
+    "Jökulsárlón Glacier Lagoon",
+    "Blue Lagoon",
+    "Gullfoss",
+    "Geysir",
+    "Diamond Beach"
+  ],
+  "keywords": [
+    "road trip",
+    "nature",
+    "adventure",
+    "northern lights",
+    "glaciers",
+    "scenic drive"
+  ]
+}
+

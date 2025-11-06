@@ -1,0 +1,54 @@
+{
+  "name": "Lucerne",
+  "location": "Central Switzerland",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Picturesque city on Lake Lucerne with historic bridges, mountains, and cultural attractions. Gateway to central Switzerland.",
+  "activities": [
+    "boat cruises",
+    "mountain excursions",
+    "museums",
+    "walking",
+    "photography",
+    "shopping",
+    "dining",
+    "cultural tours"
+  ],
+  "scenery": [
+    "lake",
+    "mountains",
+    "historic bridges",
+    "old town",
+    "alpine",
+    "waterfront",
+    "charming"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "museums",
+    "shops",
+    "boat cruises",
+    "cable cars",
+    "train station"
+  ],
+  "best_season": ["spring", "summer", "fall"],
+  "travel_time": "Train from Zurich or Bern",
+  "nearby_attractions": [
+    "Chapel Bridge",
+    "Mount Pilatus",
+    "Mount Rigi",
+    "Lake Lucerne",
+    "Swiss Transport Museum",
+    "Lion Monument"
+  ],
+  "keywords": [
+    "city",
+    "lake",
+    "mountains",
+    "historic",
+    "charming",
+    "cultural"
+  ]
+}
+

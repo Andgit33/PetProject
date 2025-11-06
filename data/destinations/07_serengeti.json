@@ -1,0 +1,51 @@
+{
+  "name": "Serengeti National Park",
+  "location": "Northern Tanzania",
+  "state": null,
+  "country": "Tanzania",
+  "description": "One of Africa's most famous wildlife reserves, home to the Great Migration. Experience incredible wildlife viewing including the Big Five.",
+  "activities": [
+    "safari",
+    "wildlife viewing",
+    "photography",
+    "bird watching",
+    "hot air ballooning",
+    "camping",
+    "cultural tours"
+  ],
+  "scenery": [
+    "savanna",
+    "acacia trees",
+    "wildlife",
+    "sunsets",
+    "plains",
+    "kopjes",
+    "rivers"
+  ],
+  "amenities": [
+    "luxury lodges",
+    "tented camps",
+    "campgrounds",
+    "restaurants",
+    "safari vehicles",
+    "guides"
+  ],
+  "best_season": ["dry season", "june to october"],
+  "travel_time": "Flight to Kilimanjaro or Arusha, then drive",
+  "nearby_attractions": [
+    "Ngorongoro Crater",
+    "Maasai Mara",
+    "Olduvai Gorge",
+    "Lake Manyara",
+    "Tarangire National Park"
+  ],
+  "keywords": [
+    "safari",
+    "wildlife",
+    "africa",
+    "migration",
+    "big five",
+    "nature"
+  ]
+}
+

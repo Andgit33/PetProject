@@ -1,0 +1,53 @@
+{
+  "name": "New Zealand South Island",
+  "location": "South Island",
+  "state": null,
+  "country": "New Zealand",
+  "description": "Stunning natural beauty with fjords, mountains, glaciers, and pristine lakes. A paradise for outdoor adventure and scenic road trips.",
+  "activities": [
+    "hiking",
+    "road tripping",
+    "bungee jumping",
+    "kayaking",
+    "skiing",
+    "wildlife viewing",
+    "photography",
+    "camping"
+  ],
+  "scenery": [
+    "fjords",
+    "mountains",
+    "glaciers",
+    "lakes",
+    "beaches",
+    "forests",
+    "alpine"
+  ],
+  "amenities": [
+    "hotels",
+    "campgrounds",
+    "lodges",
+    "restaurants",
+    "tour operators",
+    "visitor centers"
+  ],
+  "best_season": ["summer", "december to february"],
+  "travel_time": "Flight to Christchurch or Queenstown",
+  "nearby_attractions": [
+    "Milford Sound",
+    "Queenstown",
+    "Franz Josef Glacier",
+    "Lake Tekapo",
+    "Mount Cook",
+    "Abel Tasman National Park"
+  ],
+  "keywords": [
+    "adventure",
+    "nature",
+    "scenic",
+    "outdoor",
+    "fjords",
+    "mountains"
+  ]
+}
+

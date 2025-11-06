@@ -1,0 +1,54 @@
+{
+  "name": "Swiss Alps",
+  "location": "Switzerland",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Majestic mountain ranges offering world-class skiing, hiking, and breathtaking alpine scenery. Charming villages and pristine nature.",
+  "activities": [
+    "skiing",
+    "hiking",
+    "mountaineering",
+    "photography",
+    "train rides",
+    "paragliding",
+    "climbing",
+    "camping"
+  ],
+  "scenery": [
+    "mountains",
+    "glaciers",
+    "alpine meadows",
+    "lakes",
+    "villages",
+    "snow peaks",
+    "valleys"
+  ],
+  "amenities": [
+    "mountain huts",
+    "hotels",
+    "restaurants",
+    "ski resorts",
+    "cable cars",
+    "trains",
+    "visitor centers"
+  ],
+  "best_season": ["summer", "winter"],
+  "travel_time": "Flight to Zurich or Geneva, then train",
+  "nearby_attractions": [
+    "Matterhorn",
+    "Jungfrau",
+    "Interlaken",
+    "Zermatt",
+    "Lucerne",
+    "Glacier Express"
+  ],
+  "keywords": [
+    "mountains",
+    "alpine",
+    "skiing",
+    "hiking",
+    "scenic",
+    "europe"
+  ]
+}
+

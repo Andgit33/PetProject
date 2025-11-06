@@ -1,0 +1,54 @@
+{
+  "name": "Marrakech",
+  "location": "Marrakech-Safi",
+  "state": null,
+  "country": "Morocco",
+  "description": "Vibrant city known for its medina, souks, palaces, and gardens. A sensory experience of colors, sounds, and aromas.",
+  "activities": [
+    "souk shopping",
+    "palace tours",
+    "garden visits",
+    "dining",
+    "hammam",
+    "cultural tours",
+    "photography",
+    "nightlife"
+  ],
+  "scenery": [
+    "medina",
+    "palaces",
+    "gardens",
+    "souks",
+    "mosques",
+    "atlas mountains",
+    "desert"
+  ],
+  "amenities": [
+    "riads",
+    "hotels",
+    "restaurants",
+    "hammams",
+    "markets",
+    "tour guides",
+    "cafes"
+  ],
+  "best_season": ["spring", "fall"],
+  "travel_time": "Flight to Marrakech",
+  "nearby_attractions": [
+    "Jemaa el-Fnaa",
+    "Bahia Palace",
+    "Majorelle Garden",
+    "Atlas Mountains",
+    "Sahara Desert",
+    "Essaouira"
+  ],
+  "keywords": [
+    "city",
+    "culture",
+    "souks",
+    "palaces",
+    "desert",
+    "vibrant"
+  ]
+}
+

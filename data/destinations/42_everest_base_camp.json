@@ -1,0 +1,51 @@
+{
+  "name": "Everest Base Camp",
+  "location": "Sagarmatha National Park",
+  "state": null,
+  "country": "Nepal",
+  "description": "Trek to the base of the world's highest mountain. A challenging and rewarding journey through Sherpa villages and stunning Himalayan landscapes.",
+  "activities": [
+    "trekking",
+    "mountaineering",
+    "photography",
+    "cultural tours",
+    "monastery visits",
+    "wildlife viewing"
+  ],
+  "scenery": [
+    "himalayan peaks",
+    "mountains",
+    "glaciers",
+    "valleys",
+    "monasteries",
+    "sherpa villages",
+    "dramatic"
+  ],
+  "amenities": [
+    "tea houses",
+    "lodges",
+    "guides",
+    "porters",
+    "restaurants",
+    "campgrounds"
+  ],
+  "best_season": ["spring", "fall"],
+  "travel_time": "Flight to Kathmandu, then to Lukla",
+  "nearby_attractions": [
+    "Mount Everest",
+    "Lhotse",
+    "Nuptse",
+    "Tengboche Monastery",
+    "Namche Bazaar",
+    "Kala Patthar"
+  ],
+  "keywords": [
+    "trekking",
+    "mountains",
+    "himalayas",
+    "adventure",
+    "challenging",
+    "iconic"
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "name": "Rajasthan",
+  "location": "Northwestern India",
+  "state": "Rajasthan",
+  "country": "India",
+  "description": "Land of kings with magnificent palaces, forts, and vibrant culture. Experience royal heritage, desert landscapes, and colorful traditions.",
+  "activities": [
+    "palace tours",
+    "fort visits",
+    "desert safaris",
+    "camel rides",
+    "cultural shows",
+    "shopping",
+    "photography",
+    "temple visits"
+  ],
+  "scenery": [
+    "palaces",
+    "forts",
+    "desert",
+    "sand dunes",
+    "lakes",
+    "colorful cities",
+    "temples"
+  ],
+  "amenities": [
+    "heritage hotels",
+    "palace hotels",
+    "restaurants",
+    "markets",
+    "tour guides",
+    "desert camps"
+  ],
+  "best_season": ["winter", "october to march"],
+  "travel_time": "Flight to Jaipur, Jodhpur, or Udaipur",
+  "nearby_attractions": [
+    "Jaipur",
+    "Udaipur",
+    "Jodhpur",
+    "Jaisalmer",
+    "Pushkar",
+    "Ranthambore National Park"
+  ],
+  "keywords": [
+    "culture",
+    "palaces",
+    "desert",
+    "historic",
+    "royal",
+    "colorful"
+  ]
+}
+

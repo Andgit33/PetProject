@@ -1,0 +1,54 @@
+{
+  "name": "Paris",
+  "location": "Île-de-France",
+  "state": null,
+  "country": "France",
+  "description": "The City of Light, known for art, fashion, gastronomy, and culture. Home to iconic landmarks like the Eiffel Tower, Louvre Museum, and Notre-Dame.",
+  "activities": [
+    "museums",
+    "art galleries",
+    "shopping",
+    "dining",
+    "theater",
+    "walking tours",
+    "river cruises",
+    "photography"
+  ],
+  "scenery": [
+    "urban architecture",
+    "historic buildings",
+    "rivers",
+    "parks",
+    "boulevards",
+    "bridges",
+    "monuments"
+  ],
+  "amenities": [
+    "luxury hotels",
+    "restaurants",
+    "cafes",
+    "public transportation",
+    "shopping districts",
+    "museums",
+    "theaters"
+  ],
+  "best_season": ["spring", "summer", "fall"],
+  "travel_time": "International flights from major cities",
+  "nearby_attractions": [
+    "Eiffel Tower",
+    "Louvre Museum",
+    "Notre-Dame Cathedral",
+    "Champs-Élysées",
+    "Montmartre",
+    "Versailles"
+  ],
+  "keywords": [
+    "city",
+    "culture",
+    "art",
+    "romantic",
+    "historic",
+    "urban"
+  ]
+}
+

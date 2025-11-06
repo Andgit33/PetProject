@@ -1,0 +1,53 @@
+{
+  "name": "Seychelles",
+  "location": "Indian Ocean",
+  "state": null,
+  "country": "Seychelles",
+  "description": "Tropical archipelago with pristine beaches, granite boulders, and crystal-clear waters. A luxury paradise perfect for honeymoons and relaxation.",
+  "activities": [
+    "beach activities",
+    "diving",
+    "snorkeling",
+    "sailing",
+    "hiking",
+    "wildlife viewing",
+    "fishing",
+    "spa treatments"
+  ],
+  "scenery": [
+    "pristine beaches",
+    "granite boulders",
+    "coral reefs",
+    "tropical",
+    "crystal clear water",
+    "palm trees",
+    "lagoons"
+  ],
+  "amenities": [
+    "luxury resorts",
+    "beach villas",
+    "spas",
+    "restaurants",
+    "dive centers",
+    "beach clubs"
+  ],
+  "best_season": ["april to may", "october to november"],
+  "travel_time": "International flights to Mahé",
+  "nearby_attractions": [
+    "Mahé",
+    "Praslin",
+    "La Digue",
+    "Aldabra Atoll",
+    "Vallée de Mai",
+    "Anse Source d'Argent"
+  ],
+  "keywords": [
+    "island",
+    "beach",
+    "luxury",
+    "tropical",
+    "paradise",
+    "pristine"
+  ]
+}
+

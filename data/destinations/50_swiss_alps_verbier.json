@@ -1,0 +1,54 @@
+{
+  "name": "Verbier",
+  "location": "Valais",
+  "state": null,
+  "country": "Switzerland",
+  "description": "World-renowned ski resort in the 4 Vallées, known for challenging slopes, off-piste skiing, and vibrant après-ski scene.",
+  "activities": [
+    "skiing",
+    "off-piste",
+    "heli-skiing",
+    "hiking",
+    "mountain biking",
+    "paragliding",
+    "nightlife",
+    "spa"
+  ],
+  "scenery": [
+    "mountains",
+    "alpine",
+    "snow",
+    "glaciers",
+    "valleys",
+    "dramatic",
+    "panoramic"
+  ],
+  "amenities": [
+    "luxury hotels",
+    "chalets",
+    "restaurants",
+    "bars",
+    "spas",
+    "ski lifts",
+    "shops"
+  ],
+  "best_season": ["winter", "summer"],
+  "travel_time": "Train to Martigny, then bus or taxi",
+  "nearby_attractions": [
+    "Mont Fort",
+    "4 Vallées",
+    "La Chaux",
+    "Attelas",
+    "Siviez",
+    "Thyon"
+  ],
+  "keywords": [
+    "skiing",
+    "alpine",
+    "luxury",
+    "challenging",
+    "vibrant",
+    "world-class"
+  ]
+}
+

@@ -1,0 +1,52 @@
+{
+  "name": "Lauterbrunnen",
+  "location": "Bernese Oberland",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Valley of 72 waterfalls, a stunning U-shaped glacial valley. Base for exploring the Jungfrau region with dramatic mountain scenery.",
+  "activities": [
+    "waterfall viewing",
+    "hiking",
+    "photography",
+    "cable car rides",
+    "base jumping",
+    "climbing",
+    "camping"
+  ],
+  "scenery": [
+    "waterfalls",
+    "valley",
+    "mountains",
+    "glaciers",
+    "alpine",
+    "cliffs",
+    "dramatic"
+  ],
+  "amenities": [
+    "hotels",
+    "campgrounds",
+    "restaurants",
+    "cable cars",
+    "shops",
+    "visitor centers"
+  ],
+  "best_season": ["summer", "spring", "fall"],
+  "travel_time": "Train from Interlaken",
+  "nearby_attractions": [
+    "Staubbach Falls",
+    "Trümmelbach Falls",
+    "Mürren",
+    "Wengen",
+    "Jungfraujoch",
+    "Schilthorn"
+  ],
+  "keywords": [
+    "waterfalls",
+    "valley",
+    "alpine",
+    "hiking",
+    "scenic",
+    "dramatic"
+  ]
+}
+

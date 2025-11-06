@@ -1,0 +1,54 @@
+{
+  "name": "Banff National Park",
+  "location": "Alberta",
+  "state": "AB",
+  "country": "Canada",
+  "description": "Canada's first national park, featuring stunning mountain landscapes, turquoise lakes, and abundant wildlife. A paradise for outdoor enthusiasts.",
+  "activities": [
+    "hiking",
+    "camping",
+    "skiing",
+    "wildlife viewing",
+    "photography",
+    "canoeing",
+    "rock climbing",
+    "mountain biking"
+  ],
+  "scenery": [
+    "mountains",
+    "glaciers",
+    "turquoise lakes",
+    "forests",
+    "wildlife",
+    "waterfalls",
+    "alpine meadows"
+  ],
+  "amenities": [
+    "campgrounds",
+    "lodges",
+    "hotels",
+    "restaurants",
+    "visitor centers",
+    "ski resorts",
+    "parking"
+  ],
+  "best_season": ["summer", "winter"],
+  "travel_time": "1.5 hours from Calgary",
+  "nearby_attractions": [
+    "Lake Louise",
+    "Moraine Lake",
+    "Banff Town",
+    "Johnston Canyon",
+    "Sulphur Mountain",
+    "Icefields Parkway"
+  ],
+  "keywords": [
+    "national park",
+    "mountains",
+    "hiking",
+    "wildlife",
+    "scenic",
+    "outdoor"
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "name": "Santorini",
+  "location": "Aegean Sea",
+  "state": null,
+  "country": "Greece",
+  "description": "Stunning Greek island with white-washed buildings, blue domes, and spectacular sunsets. Famous for its volcanic landscape and wine.",
+  "activities": [
+    "beach activities",
+    "wine tasting",
+    "sunset viewing",
+    "photography",
+    "hiking",
+    "swimming",
+    "dining",
+    "shopping"
+  ],
+  "scenery": [
+    "volcanic cliffs",
+    "caldera views",
+    "white buildings",
+    "blue domes",
+    "sunset",
+    "beaches",
+    "ocean"
+  ],
+  "amenities": [
+    "luxury hotels",
+    "boutique hotels",
+    "restaurants",
+    "wineries",
+    "beach clubs",
+    "shops"
+  ],
+  "best_season": ["spring", "summer", "early fall"],
+  "travel_time": "Flight to Athens then ferry or direct flights",
+  "nearby_attractions": [
+    "Oia",
+    "Fira",
+    "Red Beach",
+    "Black Beach",
+    "Ancient Thera",
+    "Wine Museum"
+  ],
+  "keywords": [
+    "island",
+    "beach",
+    "romantic",
+    "sunset",
+    "mediterranean",
+    "scenic"
+  ]
+}
+

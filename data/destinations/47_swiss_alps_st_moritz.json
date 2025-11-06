@@ -1,0 +1,54 @@
+{
+  "name": "St. Moritz",
+  "location": "Engadin",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Luxury alpine resort town known for world-class skiing, polo, and high-end hospitality. A playground for the rich and famous.",
+  "activities": [
+    "skiing",
+    "polo",
+    "spa treatments",
+    "shopping",
+    "dining",
+    "hiking",
+    "photography",
+    "luxury experiences"
+  ],
+  "scenery": [
+    "alpine",
+    "lakes",
+    "mountains",
+    "snow",
+    "luxury",
+    "glaciers",
+    "elegant"
+  ],
+  "amenities": [
+    "luxury hotels",
+    "spas",
+    "restaurants",
+    "ski resorts",
+    "shops",
+    "polo fields",
+    "casinos"
+  ],
+  "best_season": ["winter", "summer"],
+  "travel_time": "Train from Zurich or Milan",
+  "nearby_attractions": [
+    "Corviglia",
+    "Lake St. Moritz",
+    "Diavolezza",
+    "Bernina Express",
+    "Engadin Valley",
+    "Piz Nair"
+  ],
+  "keywords": [
+    "luxury",
+    "skiing",
+    "alpine",
+    "elegant",
+    "resort",
+    "exclusive"
+  ]
+}
+

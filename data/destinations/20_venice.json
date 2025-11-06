@@ -1,0 +1,54 @@
+{
+  "name": "Venice",
+  "location": "Veneto",
+  "state": null,
+  "country": "Italy",
+  "description": "Famous canal city built on water, known for its art, architecture, and romantic atmosphere. A unique and enchanting destination.",
+  "activities": [
+    "gondola rides",
+    "museums",
+    "art galleries",
+    "walking tours",
+    "dining",
+    "shopping",
+    "photography",
+    "cultural tours"
+  ],
+  "scenery": [
+    "canals",
+    "bridges",
+    "historic buildings",
+    "gondolas",
+    "piazzas",
+    "architecture",
+    "waterways"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "cafes",
+    "museums",
+    "shops",
+    "water taxis",
+    "public transportation"
+  ],
+  "best_season": ["spring", "fall"],
+  "travel_time": "Flight to Venice or train from major cities",
+  "nearby_attractions": [
+    "St. Mark's Square",
+    "Doge's Palace",
+    "Rialto Bridge",
+    "Murano",
+    "Burano",
+    "Grand Canal"
+  ],
+  "keywords": [
+    "city",
+    "canals",
+    "romantic",
+    "historic",
+    "art",
+    "unique"
+  ]
+}
+

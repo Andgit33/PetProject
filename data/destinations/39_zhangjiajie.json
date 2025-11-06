@@ -1,0 +1,52 @@
+{
+  "name": "Zhangjiajie",
+  "location": "Hunan Province",
+  "state": null,
+  "country": "China",
+  "description": "Stunning national park with thousands of towering sandstone pillars. Inspiration for the floating mountains in Avatar, featuring glass bridges and cable cars.",
+  "activities": [
+    "hiking",
+    "cable car rides",
+    "photography",
+    "glass bridge walking",
+    "elevator rides",
+    "wildlife viewing",
+    "cultural tours"
+  ],
+  "scenery": [
+    "sandstone pillars",
+    "mountains",
+    "clouds",
+    "forests",
+    "canyons",
+    "waterfalls",
+    "dramatic"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "cable cars",
+    "elevators",
+    "visitor centers",
+    "shuttle buses"
+  ],
+  "best_season": ["spring", "summer", "fall"],
+  "travel_time": "Flight to Zhangjiajie or train from major cities",
+  "nearby_attractions": [
+    "Tianmen Mountain",
+    "Glass Bridge",
+    "Bailong Elevator",
+    "Yuanjiajie",
+    "Tianzi Mountain",
+    "Golden Whip Stream"
+  ],
+  "keywords": [
+    "mountains",
+    "unique",
+    "dramatic",
+    "hiking",
+    "scenic",
+    "pillars"
+  ]
+}
+

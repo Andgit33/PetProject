@@ -1,0 +1,53 @@
+{
+  "name": "Zermatt",
+  "location": "Valais",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Car-free alpine village at the foot of the Matterhorn. World-class skiing, mountaineering, and charming Swiss hospitality.",
+  "activities": [
+    "skiing",
+    "mountaineering",
+    "hiking",
+    "photography",
+    "climbing",
+    "cable car rides",
+    "spa treatments"
+  ],
+  "scenery": [
+    "matterhorn",
+    "alpine",
+    "snow",
+    "glaciers",
+    "villages",
+    "mountains",
+    "dramatic"
+  ],
+  "amenities": [
+    "luxury hotels",
+    "mountain huts",
+    "restaurants",
+    "ski resorts",
+    "spas",
+    "shops",
+    "cable cars"
+  ],
+  "best_season": ["summer", "winter"],
+  "travel_time": "Train from Visp or Brig",
+  "nearby_attractions": [
+    "Matterhorn",
+    "Gornergrat",
+    "Klein Matterhorn",
+    "Five Lakes Walk",
+    "Breithorn",
+    "Monte Rosa"
+  ],
+  "keywords": [
+    "alpine",
+    "skiing",
+    "matterhorn",
+    "luxury",
+    "mountains",
+    "charming"
+  ]
+}
+

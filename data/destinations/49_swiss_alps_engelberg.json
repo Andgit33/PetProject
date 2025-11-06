@@ -1,0 +1,52 @@
+{
+  "name": "Engelberg",
+  "location": "Central Switzerland",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Mountain resort town with a historic Benedictine monastery. Gateway to Titlis with year-round snow activities and stunning alpine views.",
+  "activities": [
+    "skiing",
+    "snow activities",
+    "hiking",
+    "monastery visits",
+    "cable car rides",
+    "photography",
+    "ice cave"
+  ],
+  "scenery": [
+    "mountains",
+    "glaciers",
+    "snow",
+    "alpine",
+    "monastery",
+    "valleys",
+    "dramatic"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "ski resorts",
+    "cable cars",
+    "monastery",
+    "shops"
+  ],
+  "best_season": ["year round"],
+  "travel_time": "Train from Lucerne",
+  "nearby_attractions": [
+    "Mount Titlis",
+    "Engelberg Monastery",
+    "Ice Cave",
+    "Brunni",
+    "Jochpass",
+    "Lucerne"
+  ],
+  "keywords": [
+    "alpine",
+    "skiing",
+    "monastery",
+    "glacier",
+    "mountains",
+    "year-round"
+  ]
+}
+

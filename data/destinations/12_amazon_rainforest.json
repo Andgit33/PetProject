@@ -1,0 +1,53 @@
+{
+  "name": "Amazon Rainforest",
+  "location": "Brazil/Peru/Ecuador",
+  "state": null,
+  "country": "Multiple",
+  "description": "The world's largest tropical rainforest, home to incredible biodiversity. Experience jungle adventures, wildlife, and indigenous culture.",
+  "activities": [
+    "jungle tours",
+    "wildlife viewing",
+    "bird watching",
+    "canoeing",
+    "fishing",
+    "cultural tours",
+    "night walks",
+    "photography"
+  ],
+  "scenery": [
+    "jungle",
+    "rivers",
+    "canopy",
+    "wildlife",
+    "tropical",
+    "dense forest",
+    "waterways"
+  ],
+  "amenities": [
+    "jungle lodges",
+    "river boats",
+    "campgrounds",
+    "guides",
+    "restaurants",
+    "visitor centers"
+  ],
+  "best_season": ["dry season", "june to november"],
+  "travel_time": "Flight to Manaus, Iquitos, or Leticia",
+  "nearby_attractions": [
+    "Meeting of the Waters",
+    "Indigenous villages",
+    "Pink dolphins",
+    "Canopy walkways",
+    "Piranha fishing",
+    "Jungle trails"
+  ],
+  "keywords": [
+    "jungle",
+    "wildlife",
+    "adventure",
+    "biodiversity",
+    "nature",
+    "tropical"
+  ]
+}
+

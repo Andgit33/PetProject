@@ -1,0 +1,53 @@
+{
+  "name": "Mauritius",
+  "location": "Indian Ocean",
+  "state": null,
+  "country": "Mauritius",
+  "description": "Tropical island paradise with pristine beaches, coral reefs, and diverse culture. Perfect for relaxation, water sports, and nature exploration.",
+  "activities": [
+    "beach activities",
+    "diving",
+    "snorkeling",
+    "water sports",
+    "hiking",
+    "cultural tours",
+    "fishing",
+    "spa treatments"
+  ],
+  "scenery": [
+    "beaches",
+    "coral reefs",
+    "mountains",
+    "waterfalls",
+    "tropical",
+    "lagoons",
+    "volcanic"
+  ],
+  "amenities": [
+    "resorts",
+    "beach clubs",
+    "restaurants",
+    "spas",
+    "dive centers",
+    "water sports facilities"
+  ],
+  "best_season": ["may to december"],
+  "travel_time": "International flights to Port Louis",
+  "nearby_attractions": [
+    "Port Louis",
+    "Chamarel",
+    "Black River Gorges",
+    "Ile aux Cerfs",
+    "Grand Baie",
+    "Seven Colored Earths"
+  ],
+  "keywords": [
+    "island",
+    "beach",
+    "tropical",
+    "diving",
+    "relaxation",
+    "paradise"
+  ]
+}
+

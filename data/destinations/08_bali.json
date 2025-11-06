@@ -1,0 +1,54 @@
+{
+  "name": "Bali",
+  "location": "Lesser Sunda Islands",
+  "state": null,
+  "country": "Indonesia",
+  "description": "Tropical paradise known for lush rice terraces, ancient temples, beautiful beaches, and vibrant culture. Perfect for relaxation and adventure.",
+  "activities": [
+    "beach activities",
+    "surfing",
+    "temple visits",
+    "yoga",
+    "spa treatments",
+    "hiking",
+    "diving",
+    "shopping"
+  ],
+  "scenery": [
+    "rice terraces",
+    "beaches",
+    "volcanoes",
+    "temples",
+    "jungle",
+    "waterfalls",
+    "tropical"
+  ],
+  "amenities": [
+    "resorts",
+    "villas",
+    "spas",
+    "restaurants",
+    "beach clubs",
+    "yoga studios",
+    "markets"
+  ],
+  "best_season": ["dry season", "april to october"],
+  "travel_time": "International flights to Denpasar",
+  "nearby_attractions": [
+    "Ubud",
+    "Tanah Lot Temple",
+    "Tegallalang Rice Terraces",
+    "Mount Batur",
+    "Seminyak Beach",
+    "Sacred Monkey Forest"
+  ],
+  "keywords": [
+    "island",
+    "beach",
+    "tropical",
+    "culture",
+    "spiritual",
+    "relaxation"
+  ]
+}
+

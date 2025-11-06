@@ -1,0 +1,53 @@
+{
+  "name": "Uluru",
+  "location": "Northern Territory",
+  "state": "NT",
+  "country": "Australia",
+  "description": "Sacred red sandstone monolith in the Australian Outback. A spiritual and cultural landmark with stunning sunrise and sunset views.",
+  "activities": [
+    "sunrise viewing",
+    "sunset viewing",
+    "cultural tours",
+    "hiking",
+    "photography",
+    "stargazing",
+    "helicopter tours",
+    "camel rides"
+  ],
+  "scenery": [
+    "red rock",
+    "desert",
+    "outback",
+    "sunrise",
+    "sunset",
+    "stars",
+    "sacred site"
+  ],
+  "amenities": [
+    "resort",
+    "campgrounds",
+    "restaurants",
+    "visitor center",
+    "tour operators",
+    "cultural center"
+  ],
+  "best_season": ["winter", "may to september"],
+  "travel_time": "Flight to Ayers Rock Airport",
+  "nearby_attractions": [
+    "Kata Tjuta",
+    "Kings Canyon",
+    "Field of Light",
+    "Cultural Center",
+    "Valley of the Winds",
+    "Watarrka National Park"
+  ],
+  "keywords": [
+    "sacred",
+    "desert",
+    "outback",
+    "cultural",
+    "unique",
+    "spiritual"
+  ]
+}
+

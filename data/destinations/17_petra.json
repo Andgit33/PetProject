@@ -1,0 +1,52 @@
+{
+  "name": "Petra",
+  "location": "Ma'an Governorate",
+  "state": null,
+  "country": "Jordan",
+  "description": "Ancient Nabatean city carved into rose-red sandstone cliffs. One of the New Seven Wonders of the World, a stunning archaeological marvel.",
+  "activities": [
+    "archaeological tours",
+    "hiking",
+    "photography",
+    "camel rides",
+    "cultural tours",
+    "night tours",
+    "trekking"
+  ],
+  "scenery": [
+    "sandstone cliffs",
+    "ancient ruins",
+    "canyons",
+    "desert",
+    "carved facades",
+    "rock formations",
+    "valleys"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "tour guides",
+    "visitor centers",
+    "shops",
+    "camel rentals"
+  ],
+  "best_season": ["spring", "fall"],
+  "travel_time": "Flight to Amman, then drive",
+  "nearby_attractions": [
+    "The Treasury",
+    "The Monastery",
+    "Wadi Rum",
+    "Dead Sea",
+    "Amman",
+    "Little Petra"
+  ],
+  "keywords": [
+    "archaeological",
+    "ancient",
+    "desert",
+    "unesco",
+    "historic",
+    "wonder"
+  ]
+}
+

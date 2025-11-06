@@ -1,0 +1,54 @@
+{
+  "name": "Kyoto",
+  "location": "Kansai",
+  "state": null,
+  "country": "Japan",
+  "description": "Japan's ancient capital, home to thousands of temples, traditional gardens, and geisha districts. A perfect blend of history and culture.",
+  "activities": [
+    "temple visits",
+    "garden tours",
+    "tea ceremonies",
+    "photography",
+    "shopping",
+    "dining",
+    "cultural experiences",
+    "hiking"
+  ],
+  "scenery": [
+    "temples",
+    "bamboo forests",
+    "gardens",
+    "cherry blossoms",
+    "traditional architecture",
+    "mountains",
+    "rivers"
+  ],
+  "amenities": [
+    "ryokans",
+    "hotels",
+    "restaurants",
+    "tea houses",
+    "shops",
+    "public transportation",
+    "museums"
+  ],
+  "best_season": ["spring", "fall"],
+  "travel_time": "Flight to Osaka, then train to Kyoto",
+  "nearby_attractions": [
+    "Fushimi Inari Shrine",
+    "Arashiyama Bamboo Grove",
+    "Kiyomizu-dera",
+    "Golden Pavilion",
+    "Gion District",
+    "Nara"
+  ],
+  "keywords": [
+    "culture",
+    "temples",
+    "traditional",
+    "historic",
+    "gardens",
+    "japan"
+  ]
+}
+

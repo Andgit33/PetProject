@@ -1,0 +1,52 @@
+{
+  "name": "Oia, Santorini",
+  "location": "Santorini",
+  "state": null,
+  "country": "Greece",
+  "description": "Picturesque village with white-washed buildings, blue domes, and world-famous sunsets. The most photographed location in Greece.",
+  "activities": [
+    "sunset viewing",
+    "photography",
+    "shopping",
+    "dining",
+    "wine tasting",
+    "walking",
+    "beach activities"
+  ],
+  "scenery": [
+    "white buildings",
+    "blue domes",
+    "caldera views",
+    "sunset",
+    "cliffs",
+    "ocean",
+    "volcanic"
+  ],
+  "amenities": [
+    "luxury hotels",
+    "boutique hotels",
+    "restaurants",
+    "shops",
+    "art galleries",
+    "wineries"
+  ],
+  "best_season": ["spring", "summer", "early fall"],
+  "travel_time": "Flight to Santorini, then drive or bus",
+  "nearby_attractions": [
+    "Fira",
+    "Red Beach",
+    "Black Beach",
+    "Ancient Thera",
+    "Wine Museum",
+    "Akrotiri"
+  ],
+  "keywords": [
+    "village",
+    "sunset",
+    "romantic",
+    "scenic",
+    "mediterranean",
+    "iconic"
+  ]
+}
+

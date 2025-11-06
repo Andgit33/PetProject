@@ -1,0 +1,52 @@
+{
+  "name": "Matterhorn",
+  "location": "Valais",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Iconic pyramid-shaped peak, one of the most photographed mountains in the world. A symbol of the Swiss Alps offering world-class skiing and mountaineering.",
+  "activities": [
+    "mountaineering",
+    "skiing",
+    "hiking",
+    "photography",
+    "climbing",
+    "cable car rides",
+    "paragliding"
+  ],
+  "scenery": [
+    "mountain peak",
+    "alpine",
+    "glaciers",
+    "snow",
+    "valleys",
+    "lakes",
+    "dramatic"
+  ],
+  "amenities": [
+    "mountain huts",
+    "hotels",
+    "restaurants",
+    "ski resorts",
+    "cable cars",
+    "visitor centers"
+  ],
+  "best_season": ["summer", "winter"],
+  "travel_time": "Train to Zermatt",
+  "nearby_attractions": [
+    "Zermatt",
+    "Gornergrat",
+    "Klein Matterhorn",
+    "Five Lakes Walk",
+    "Breithorn",
+    "Monte Rosa"
+  ],
+  "keywords": [
+    "mountain",
+    "alpine",
+    "iconic",
+    "skiing",
+    "climbing",
+    "dramatic"
+  ]
+}
+

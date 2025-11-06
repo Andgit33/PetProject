@@ -1,0 +1,49 @@
+{
+  "name": "Antelope Canyon",
+  "location": "Arizona",
+  "state": "AZ",
+  "country": "USA",
+  "description": "Slot canyon with wave-like formations and light beams. A photographer's paradise with stunning sandstone formations carved by water and wind.",
+  "activities": [
+    "photography",
+    "guided tours",
+    "light beam viewing",
+    "hiking",
+    "canyon exploring"
+  ],
+  "scenery": [
+    "slot canyon",
+    "sandstone",
+    "light beams",
+    "wave formations",
+    "narrow passages",
+    "colors",
+    "desert"
+  ],
+  "amenities": [
+    "tour operators",
+    "visitor centers",
+    "parking",
+    "restaurants nearby",
+    "hotels nearby"
+  ],
+  "best_season": ["spring", "summer", "fall"],
+  "travel_time": "2.5 hours from Las Vegas, 2 hours from Page",
+  "nearby_attractions": [
+    "Upper Antelope Canyon",
+    "Lower Antelope Canyon",
+    "Horseshoe Bend",
+    "Lake Powell",
+    "Grand Canyon",
+    "Monument Valley"
+  ],
+  "keywords": [
+    "canyon",
+    "photography",
+    "unique",
+    "desert",
+    "light beams",
+    "sandstone"
+  ]
+}
+

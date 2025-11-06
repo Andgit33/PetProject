@@ -1,0 +1,54 @@
+{
+  "name": "Tokyo",
+  "location": "Kanto",
+  "state": null,
+  "country": "Japan",
+  "description": "A vibrant metropolis blending ultra-modern and traditional. Known for cherry blossoms, temples, cutting-edge technology, and world-class cuisine.",
+  "activities": [
+    "temple visits",
+    "shopping",
+    "dining",
+    "nightlife",
+    "anime culture",
+    "gardens",
+    "museums",
+    "onsen"
+  ],
+  "scenery": [
+    "skyscrapers",
+    "temples",
+    "cherry blossoms",
+    "gardens",
+    "neon lights",
+    "traditional architecture",
+    "urban landscape"
+  ],
+  "amenities": [
+    "hotels",
+    "ryokans",
+    "restaurants",
+    "public transportation",
+    "shopping",
+    "convenience stores",
+    "onsen"
+  ],
+  "best_season": ["spring", "fall"],
+  "travel_time": "International flights from major cities",
+  "nearby_attractions": [
+    "Senso-ji Temple",
+    "Shibuya Crossing",
+    "Tokyo Skytree",
+    "Meiji Shrine",
+    "Tsukiji Fish Market",
+    "Mount Fuji"
+  ],
+  "keywords": [
+    "city",
+    "culture",
+    "technology",
+    "traditional",
+    "modern",
+    "asia"
+  ]
+}
+

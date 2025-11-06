@@ -1,0 +1,53 @@
+{
+  "name": "Cinque Terre",
+  "location": "Liguria",
+  "state": null,
+  "country": "Italy",
+  "description": "Five colorful fishing villages perched on cliffs along the Italian Riviera. A UNESCO World Heritage site with stunning coastal views and hiking trails.",
+  "activities": [
+    "hiking",
+    "beach activities",
+    "photography",
+    "wine tasting",
+    "swimming",
+    "boat tours",
+    "dining",
+    "shopping"
+  ],
+  "scenery": [
+    "colorful villages",
+    "cliffs",
+    "mediterranean sea",
+    "terraced vineyards",
+    "hiking trails",
+    "coastline",
+    "harbors"
+  ],
+  "amenities": [
+    "hotels",
+    "boutique hotels",
+    "restaurants",
+    "beach facilities",
+    "shops",
+    "train service"
+  ],
+  "best_season": ["spring", "summer", "early fall"],
+  "travel_time": "Train from Genoa or Pisa",
+  "nearby_attractions": [
+    "Monterosso",
+    "Vernazza",
+    "Corniglia",
+    "Manarola",
+    "Riomaggiore",
+    "Portofino"
+  ],
+  "keywords": [
+    "coast",
+    "villages",
+    "hiking",
+    "mediterranean",
+    "scenic",
+    "unesco"
+  ]
+}
+

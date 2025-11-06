@@ -1,0 +1,54 @@
+{
+  "name": "Maldives",
+  "location": "Indian Ocean",
+  "state": null,
+  "country": "Maldives",
+  "description": "Tropical paradise with overwater bungalows, pristine beaches, and world-class diving. The ultimate luxury beach destination.",
+  "activities": [
+    "diving",
+    "snorkeling",
+    "beach activities",
+    "water sports",
+    "spa treatments",
+    "fishing",
+    "sailing",
+    "sunset cruises"
+  ],
+  "scenery": [
+    "overwater bungalows",
+    "pristine beaches",
+    "coral reefs",
+    "crystal clear water",
+    "tropical",
+    "lagoons",
+    "atolls"
+  ],
+  "amenities": [
+    "luxury resorts",
+    "overwater villas",
+    "spas",
+    "restaurants",
+    "dive centers",
+    "beach clubs",
+    "water sports"
+  ],
+  "best_season": ["dry season", "november to april"],
+  "travel_time": "International flights to Malé",
+  "nearby_attractions": [
+    "Malé",
+    "Various atolls",
+    "Coral reefs",
+    "Manta ray spots",
+    "Whale shark areas",
+    "Local islands"
+  ],
+  "keywords": [
+    "island",
+    "luxury",
+    "diving",
+    "beach",
+    "overwater",
+    "paradise"
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "name": "Great Barrier Reef",
+  "location": "Queensland",
+  "state": "QLD",
+  "country": "Australia",
+  "description": "The world's largest coral reef system, a UNESCO World Heritage site. Incredible marine biodiversity perfect for diving and snorkeling.",
+  "activities": [
+    "diving",
+    "snorkeling",
+    "sailing",
+    "whale watching",
+    "island hopping",
+    "photography",
+    "fishing",
+    "helicopter tours"
+  ],
+  "scenery": [
+    "coral reefs",
+    "tropical islands",
+    "crystal clear water",
+    "marine life",
+    "beaches",
+    "lagoons",
+    "tropical"
+  ],
+  "amenities": [
+    "resorts",
+    "liveaboard boats",
+    "dive centers",
+    "restaurants",
+    "beach facilities",
+    "tour operators"
+  ],
+  "best_season": ["dry season", "june to october"],
+  "travel_time": "Flight to Cairns or Townsville",
+  "nearby_attractions": [
+    "Whitsunday Islands",
+    "Hamilton Island",
+    "Cairns",
+    "Port Douglas",
+    "Lizard Island",
+    "Heron Island"
+  ],
+  "keywords": [
+    "diving",
+    "reef",
+    "marine",
+    "tropical",
+    "islands",
+    "snorkeling"
+  ]
+}
+

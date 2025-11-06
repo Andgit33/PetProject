@@ -1,0 +1,52 @@
+{
+  "name": "Cappadocia",
+  "location": "Central Anatolia",
+  "state": null,
+  "country": "Turkey",
+  "description": "Unique landscape of fairy chimneys, cave dwellings, and underground cities. Famous for hot air balloon rides at sunrise.",
+  "activities": [
+    "hot air ballooning",
+    "cave exploring",
+    "hiking",
+    "photography",
+    "cultural tours",
+    "horseback riding",
+    "underground city tours"
+  ],
+  "scenery": [
+    "fairy chimneys",
+    "cave dwellings",
+    "valleys",
+    "balloons",
+    "rock formations",
+    "sunrise",
+    "desert"
+  ],
+  "amenities": [
+    "cave hotels",
+    "hotels",
+    "restaurants",
+    "tour operators",
+    "balloon companies",
+    "shops"
+  ],
+  "best_season": ["spring", "summer", "fall"],
+  "travel_time": "Flight to Kayseri or Nevşehir",
+  "nearby_attractions": [
+    "Göreme",
+    "Uçhisar Castle",
+    "Derinkuyu Underground City",
+    "Ihlara Valley",
+    "Pasabag",
+    "Love Valley"
+  ],
+  "keywords": [
+    "unique",
+    "balloons",
+    "caves",
+    "historic",
+    "scenic",
+    "adventure"
+  ]
+}
+

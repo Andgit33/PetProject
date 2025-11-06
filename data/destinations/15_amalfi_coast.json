@@ -1,0 +1,53 @@
+{
+  "name": "Amalfi Coast",
+  "location": "Campania",
+  "state": null,
+  "country": "Italy",
+  "description": "Stunning Mediterranean coastline with colorful cliffside villages, dramatic views, and crystal-clear waters. A romantic and scenic destination.",
+  "activities": [
+    "beach activities",
+    "hiking",
+    "boat tours",
+    "dining",
+    "shopping",
+    "photography",
+    "swimming",
+    "wine tasting"
+  ],
+  "scenery": [
+    "coastline",
+    "cliffs",
+    "colorful villages",
+    "mediterranean sea",
+    "mountains",
+    "lemon groves",
+    "terraces"
+  ],
+  "amenities": [
+    "luxury hotels",
+    "boutique hotels",
+    "restaurants",
+    "beach clubs",
+    "shops",
+    "marinas"
+  ],
+  "best_season": ["spring", "summer", "early fall"],
+  "travel_time": "Flight to Naples, then drive or ferry",
+  "nearby_attractions": [
+    "Positano",
+    "Amalfi",
+    "Ravello",
+    "Capri",
+    "Sorrento",
+    "Path of the Gods"
+  ],
+  "keywords": [
+    "coast",
+    "mediterranean",
+    "romantic",
+    "scenic",
+    "beach",
+    "villages"
+  ]
+}
+

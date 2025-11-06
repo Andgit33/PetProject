@@ -1,0 +1,53 @@
+{
+  "name": "Patagonia",
+  "location": "Southern Chile and Argentina",
+  "state": null,
+  "country": "Chile/Argentina",
+  "description": "Vast wilderness region at the southern tip of South America, featuring dramatic mountains, glaciers, and pristine landscapes. A hiker's paradise.",
+  "activities": [
+    "hiking",
+    "trekking",
+    "glacier tours",
+    "wildlife viewing",
+    "photography",
+    "camping",
+    "kayaking",
+    "ice climbing"
+  ],
+  "scenery": [
+    "mountains",
+    "glaciers",
+    "fjords",
+    "lakes",
+    "steppe",
+    "towers",
+    "ice fields"
+  ],
+  "amenities": [
+    "refugios",
+    "campgrounds",
+    "lodges",
+    "restaurants",
+    "tour operators",
+    "visitor centers"
+  ],
+  "best_season": ["summer", "december to march"],
+  "travel_time": "Flight to Punta Arenas or El Calafate",
+  "nearby_attractions": [
+    "Torres del Paine",
+    "Perito Moreno Glacier",
+    "Fitz Roy",
+    "W Circuit",
+    "Ushuaia",
+    "Penguin colonies"
+  ],
+  "keywords": [
+    "hiking",
+    "mountains",
+    "glaciers",
+    "wilderness",
+    "adventure",
+    "remote"
+  ]
+}
+

@@ -1,0 +1,53 @@
+{
+  "name": "Norwegian Fjords",
+  "location": "Western Norway",
+  "state": null,
+  "country": "Norway",
+  "description": "Dramatic fjords carved by glaciers, featuring steep cliffs, waterfalls, and pristine nature. One of the world's most scenic destinations.",
+  "activities": [
+    "cruising",
+    "hiking",
+    "kayaking",
+    "photography",
+    "fishing",
+    "wildlife viewing",
+    "train rides",
+    "camping"
+  ],
+  "scenery": [
+    "fjords",
+    "waterfalls",
+    "mountains",
+    "glaciers",
+    "cliffs",
+    "villages",
+    "northern lights"
+  ],
+  "amenities": [
+    "hotels",
+    "cruise ships",
+    "restaurants",
+    "tour operators",
+    "campgrounds",
+    "visitor centers"
+  ],
+  "best_season": ["summer", "may to september"],
+  "travel_time": "Flight to Bergen or Oslo, then cruise or drive",
+  "nearby_attractions": [
+    "Geirangerfjord",
+    "Nærøyfjord",
+    "Bergen",
+    "Flam Railway",
+    "Trolltunga",
+    "Preikestolen"
+  ],
+  "keywords": [
+    "fjords",
+    "scenic",
+    "nature",
+    "cruising",
+    "mountains",
+    "nordic"
+  ]
+}
+

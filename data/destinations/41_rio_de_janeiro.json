@@ -1,0 +1,53 @@
+{
+  "name": "Rio de Janeiro",
+  "location": "Rio de Janeiro",
+  "state": "RJ",
+  "country": "Brazil",
+  "description": "Vibrant coastal city known for Copacabana and Ipanema beaches, Christ the Redeemer, samba, and Carnival. A city of contrasts and energy.",
+  "activities": [
+    "beach activities",
+    "samba",
+    "hiking",
+    "photography",
+    "nightlife",
+    "dining",
+    "shopping",
+    "cable car rides"
+  ],
+  "scenery": [
+    "beaches",
+    "mountains",
+    "urban",
+    "statue",
+    "sugarloaf",
+    "tropical",
+    "bays"
+  ],
+  "amenities": [
+    "hotels",
+    "beach facilities",
+    "restaurants",
+    "nightlife",
+    "cable cars",
+    "public transportation"
+  ],
+  "best_season": ["summer", "december to march"],
+  "travel_time": "International flights to Rio",
+  "nearby_attractions": [
+    "Christ the Redeemer",
+    "Copacabana",
+    "Ipanema",
+    "Sugarloaf Mountain",
+    "Tijuca Forest",
+    "Carnival"
+  ],
+  "keywords": [
+    "city",
+    "beach",
+    "vibrant",
+    "culture",
+    "tropical",
+    "iconic"
+  ]
+}
+

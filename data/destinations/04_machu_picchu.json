@@ -1,0 +1,52 @@
+{
+  "name": "Machu Picchu",
+  "location": "Cusco Region",
+  "state": null,
+  "country": "Peru",
+  "description": "Ancient Incan citadel set high in the Andes Mountains. One of the New Seven Wonders of the World, offering breathtaking mountain views and archaeological wonders.",
+  "activities": [
+    "hiking",
+    "trekking",
+    "archaeological tours",
+    "photography",
+    "bird watching",
+    "cultural tours",
+    "camping"
+  ],
+  "scenery": [
+    "mountains",
+    "ancient ruins",
+    "cloud forest",
+    "valleys",
+    "terraces",
+    "mountain peaks",
+    "sunrise"
+  ],
+  "amenities": [
+    "lodges",
+    "campgrounds",
+    "restaurants",
+    "tour guides",
+    "train service",
+    "visitor center"
+  ],
+  "best_season": ["dry season", "may to september"],
+  "travel_time": "Flight to Cusco, then train or trek",
+  "nearby_attractions": [
+    "Inca Trail",
+    "Huayna Picchu",
+    "Sacred Valley",
+    "Cusco",
+    "Ollantaytambo",
+    "Salkantay Trek"
+  ],
+  "keywords": [
+    "archaeological",
+    "hiking",
+    "mountains",
+    "ancient",
+    "adventure",
+    "unesco"
+  ]
+}
+

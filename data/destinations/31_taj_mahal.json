@@ -1,0 +1,51 @@
+{
+  "name": "Taj Mahal",
+  "location": "Agra",
+  "state": "Uttar Pradesh",
+  "country": "India",
+  "description": "Iconic white marble mausoleum, one of the New Seven Wonders of the World. A symbol of eternal love and architectural masterpiece.",
+  "activities": [
+    "photography",
+    "sunrise viewing",
+    "sunset viewing",
+    "cultural tours",
+    "architecture tours",
+    "moonlight viewing"
+  ],
+  "scenery": [
+    "white marble",
+    "mausoleum",
+    "gardens",
+    "reflecting pool",
+    "minarets",
+    "sunrise",
+    "sunset"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "tour guides",
+    "visitor centers",
+    "shops",
+    "parking"
+  ],
+  "best_season": ["winter", "october to march"],
+  "travel_time": "3 hours from Delhi",
+  "nearby_attractions": [
+    "Agra Fort",
+    "Fatehpur Sikri",
+    "Itmad-ud-Daulah",
+    "Mehtab Bagh",
+    "Delhi",
+    "Jaipur"
+  ],
+  "keywords": [
+    "monument",
+    "architecture",
+    "historic",
+    "wonder",
+    "romantic",
+    "cultural"
+  ]
+}
+

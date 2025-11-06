@@ -1,0 +1,53 @@
+{
+  "name": "Interlaken",
+  "location": "Bernese Oberland",
+  "state": null,
+  "country": "Switzerland",
+  "description": "Adventure capital of Switzerland, nestled between two lakes and surrounded by mountains. Perfect for adrenaline activities and scenic beauty.",
+  "activities": [
+    "paragliding",
+    "skydiving",
+    "bungee jumping",
+    "canyoning",
+    "hiking",
+    "skiing",
+    "boat cruises",
+    "photography"
+  ],
+  "scenery": [
+    "mountains",
+    "lakes",
+    "alpine",
+    "valleys",
+    "waterfalls",
+    "glaciers",
+    "dramatic"
+  ],
+  "amenities": [
+    "hotels",
+    "restaurants",
+    "adventure companies",
+    "tour operators",
+    "shops",
+    "train station"
+  ],
+  "best_season": ["summer", "winter"],
+  "travel_time": "Train from Zurich or Bern",
+  "nearby_attractions": [
+    "Jungfraujoch",
+    "Harder Kulm",
+    "Lake Thun",
+    "Lake Brienz",
+    "Grindelwald",
+    "Lauterbrunnen"
+  ],
+  "keywords": [
+    "adventure",
+    "mountains",
+    "alpine",
+    "lakes",
+    "adrenaline",
+    "scenic"
+  ]
+}
+
