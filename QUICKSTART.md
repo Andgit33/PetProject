@@ -8,19 +8,12 @@ conda env create -f env.yml
 conda activate road-trip-planner
 
 # Or using pip
-pip install sentence-transformers faiss-cpu numpy torch rich typer pydantic
+pip install sentence-transformers faiss-cpu numpy torch streamlit plotly rich typer pydantic geopy pandas
 ```
 
-## 2. Add Destination Data
+## 2. Build the Index
 
-Place JSON files in `data/destinations/`. See the example files for the format:
-- `example_yosemite.json`
-- `example_grand_canyon.json`
-- `example_santa_monica.json`
-
-You can add your own destination files following the same structure.
-
-## 3. Build the Index
+The project comes with **50 pre-loaded destinations** from around the world. You just need to build the index:
 
 ```bash
 # Using the CLI
@@ -31,12 +24,14 @@ python build_index.py
 ```
 
 This will:
-- Load all JSON files from `data/destinations/`
-- Generate embeddings for each destination
+- Load all 50 JSON files from `data/destinations/`
+- Generate embeddings for each destination across 4 dimensions
 - Create FAISS indices for fast similarity search
 - Save everything to `data/derived/index/`
 
-## 4. Query Destinations
+**Note:** You only need to build the index once (or when you add/modify destinations).
+
+## 3. Query Destinations
 
 ### Using the Web UI (Recommended)
 
@@ -45,10 +40,13 @@ streamlit run UI.py
 ```
 
 This will open a browser window with an interactive interface where you can:
-- Enter your travel preferences
+- Enter your travel preferences in natural language
 - Adjust weights for different aspects (activities, scenery, amenities, location)
-- View results with visual score breakdowns
-- See detailed destination information
+- View results with visual score breakdowns (charts, gauges, progress bars)
+- See interactive maps for each destination
+- Filter by country, budget level, and best season
+- Share or download results
+- See detailed destination information with full metadata
 
 ### Using the CLI
 
