@@ -102,25 +102,39 @@ if "amenities_weight" not in st.session_state:
 if "location_weight" not in st.session_state:
     st.session_state.location_weight = 0.1
 
+all_weight_keys = ["activities_weight", "scenery_weight", "amenities_weight", "location_weight"]
+
+# Store previous values to detect which slider changed
+if "_prev_weights" not in st.session_state:
+    st.session_state._prev_weights = {
+        "activities_weight": st.session_state.get("activities_weight", 0.4),
+        "scenery_weight": st.session_state.get("scenery_weight", 0.3),
+        "amenities_weight": st.session_state.get("amenities_weight", 0.2),
+        "location_weight": st.session_state.get("location_weight", 0.1)
+    }
+
+# Check for pending adjustments (from previous run) and apply them BEFORE rendering widgets
+if "_pending_adjustments" in st.session_state and st.session_state._pending_adjustments:
+    adjustments = st.session_state._pending_adjustments
+    for key, value in adjustments.items():
+        st.session_state[key] = float(value)
+    del st.session_state._pending_adjustments
+    # Update previous values
+    for key in all_weight_keys:
+        st.session_state._prev_weights[key] = float(st.session_state.get(key, 0.0))
+    st.rerun()
+
 # Custom slider function to enforce sum <= 1
 def balanced_slider(label, key, other_keys):
-    current_value = st.session_state[key]
-    new_value = st.slider(label, 0.0, 1.0, current_value, step=0.01, key=key)
-
-    # Check sum and adjust others if needed
-    total = sum(st.session_state[k] for k in [key] + other_keys)
-
-    if total > 1.0:
-        excess = total - 1.0
-        # Distribute excess proportionally among other sliders
-        for other_key in other_keys:
-            other_value = st.session_state[other_key]
-            if other_value > 0:
-                reduce = min(excess, other_value)
-                st.session_state[other_key] -= reduce
-                excess -= reduce
-            if excess <= 0:
-                break
+    # Ensure all keys exist in session state with valid float values
+    if key not in st.session_state:
+        st.session_state[key] = 0.0
+    for other_key in other_keys:
+        if other_key not in st.session_state:
+            st.session_state[other_key] = 0.0
+    
+    current_value = float(st.session_state[key])
+    st.slider(label, 0.0, 1.0, current_value, step=0.01, key=key)
 
 # Render sliders in columns
 col1, col2 = st.columns(2)
@@ -130,6 +144,46 @@ with col1:
 with col2:
     balanced_slider("Amenities", "amenities_weight", ["activities_weight", "scenery_weight", "location_weight"])
     balanced_slider("Location", "location_weight", ["activities_weight", "scenery_weight", "amenities_weight"])
+
+# After all sliders are rendered, check if adjustments are needed
+changed_key = None
+
+# Find which slider changed (if any)
+for key in all_weight_keys:
+    current_val = float(st.session_state.get(key, 0.0))
+    prev_val = float(st.session_state._prev_weights.get(key, 0.0))
+    if abs(current_val - prev_val) > 0.001:
+        changed_key = key
+        break
+
+# If a slider changed and total exceeds 1.0, calculate and schedule adjustments
+if changed_key:
+    total = sum(float(st.session_state.get(k, 0.0)) for k in all_weight_keys)
+    if total > 1.0:
+        excess = total - 1.0
+        # Get other keys (all except the one that changed)
+        other_keys = [k for k in all_weight_keys if k != changed_key]
+        
+        # Calculate adjustments
+        adjustments = {}
+        for other_key in other_keys:
+            if excess <= 0.001:
+                break
+            other_value = float(st.session_state.get(other_key, 0.0))
+            if other_value > 0:
+                reduce_amount = min(excess, other_value)
+                new_other_value = max(0.0, other_value - reduce_amount)
+                adjustments[other_key] = float(new_other_value)
+                excess -= reduce_amount
+        
+        # Store adjustments for next run (to be applied before widgets are rendered)
+        if adjustments:
+            st.session_state._pending_adjustments = adjustments
+            st.rerun()
+
+# Update previous values for next render
+for key in all_weight_keys:
+    st.session_state._prev_weights[key] = float(st.session_state.get(key, 0.0))
 
 total_weight = (
     st.session_state.activities_weight + 
@@ -246,38 +300,28 @@ if st.button("🔍 Find Destinations", type="primary"):
                 
                 st.success(f"Found {len(filtered_results)} matching destinations!")
                 
-                # Share and Download buttons at the top of results
+                # Download button at the top of results
                 if filtered_results:
-                    # Generate shareable summary
-                    share_text = f"🗺️ Road Trip Planner Results\n\n"
-                    share_text += f"Query: {query_text}\n\n"
-                    share_text += f"Top {len(filtered_results)} Destinations:\n\n"
+                    # Generate downloadable summary
+                    download_text = f"🗺️ Road Trip Planner Results\n\n"
+                    download_text += f"Query: {query_text}\n\n"
+                    download_text += f"Top {len(filtered_results)} Destinations:\n\n"
                     
                     for i, result in enumerate(filtered_results[:5], 1):
-                        share_text += f"{i}. {result['destination']} ({result['location']})\n"
-                        share_text += f"   Match Score: {result['score']:.1%}\n"
+                        download_text += f"{i}. {result['destination']} ({result['location']})\n"
+                        download_text += f"   Match Score: {result['score']:.1%}\n"
                         budget = infer_budget_level(result.get('full_data', {}))
-                        share_text += f"   Budget: {budget}\n\n"
+                        download_text += f"   Budget: {budget}\n\n"
                     
-                    # Store in session state
-                    st.session_state.share_text = share_text
-                    
-                    share_col1, share_col2, share_col3 = st.columns([2, 1, 1])
-                    with share_col2:
-                        if st.button("📤 Share Results", key="share_button"):
-                            st.code(share_text, language=None)
-                            st.success("📋 Copy the text above to share!")
-                    
-                    with share_col3:
-                        # Download as text file
-                        safe_filename = query_text[:20].replace(' ', '_').replace('/', '_').replace('\\', '_')
-                        st.download_button(
-                            label="💾 Download Results",
-                            data=share_text,
-                            file_name=f"road_trip_results_{safe_filename}.txt",
-                            mime="text/plain",
-                            key="download_file"
-                        )
+                    # Download as text file
+                    safe_filename = query_text[:20].replace(' ', '_').replace('/', '_').replace('\\', '_')
+                    st.download_button(
+                        label="💾 Download Results",
+                        data=download_text,
+                        file_name=f"road_trip_results_{safe_filename}.txt",
+                        mime="text/plain",
+                        key="download_file"
+                    )
                 
                 # --- Display results ---
                 for i, result in enumerate(filtered_results, 1):
