@@ -240,7 +240,13 @@ if st.button("🔍 Find Destinations", type="primary"):
     if not query_text.strip():
         st.warning("Please enter your travel preferences.")
     else:
-        with st.spinner("Searching destinations..."):
+        # Check if index exists to show appropriate message
+        from src.config import INDEX_PATH
+        index_exists = INDEX_PATH.with_suffix('.activities.idx').exists()
+        
+        spinner_message = "🔨 Building search index for the first time. This may take a few minutes..." if not index_exists else "Searching destinations..."
+        
+        with st.spinner(spinner_message):
             try:
                 planner = get_planner()
                 
