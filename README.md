@@ -1,6 +1,6 @@
 # Road Trip Planner 🗺️
 
-A RAG-based road trip planning tool that helps you discover destinations based on your preferences using semantic search and cosine similarity. Features an interactive web interface with maps, filters, and visual score breakdowns.
+A RAG-based road trip planning tool that helps you discover destinations based on your preferences using semantic search and cosine similarity. The Streamlit UI includes improved geocoding + captions for maps, granular filters, and visual score breakdowns so you can explore each recommendation at a glance.
 
 ## Overview
 
@@ -47,7 +47,7 @@ conda activate road-trip-planner
 
 Or using pip:
 ```bash
-pip install sentence-transformers faiss-cpu numpy torch streamlit plotly rich typer pydantic geopy pandas
+pip install -r requirements.txt
 ```
 
 2. **Build the index:**
@@ -221,10 +221,16 @@ Each destination includes an interactive map showing its location, geocoded from
 - [ ] Photo galleries for destinations
 - [ ] Travel time/distance calculator between destinations
 
+## Deployment
+
+- **Local Streamlit:** `streamlit run UI.py`
+- **Streamlit Community Cloud:** point the app to `UI.py`, and let it install from `requirements.txt`. The file mirrors `env.yml`, keeping conda and pip installs in sync.
+- **Custom hosting (Docker, Render, etc.):** install via `conda env create -f env.yml` or `pip install -r requirements.txt`, run `python -m src.cli build`, then launch the Streamlit UI or CLI.
+
 ## Requirements
 
 - Python 3.10+
-- See `env.yml` for full dependency list
+- Dependency lists live in `env.yml` (conda) and `requirements.txt` (pip/Streamlit)
 - Internet connection for geocoding (maps feature)
 
 ## Troubleshooting
