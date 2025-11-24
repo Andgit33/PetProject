@@ -39,38 +39,36 @@ def infer_budget_level(destination_data):
     return "Mid-Range"
 
 @st.cache_data(ttl=3600)  # Cache for 1 hour
-def geocode_location(location, state=None, country=None):
-    """Geocode a location to get coordinates (cached)."""
+def geocode_location(name=None, location=None, state=None, country=None):
+    """Geocode a destination by prioritizing its proper name, with regional fallbacks."""
     try:
         geolocator = get_geocoder()
         
-        # Build search string
-        search_parts = []
-        if location:
-            search_parts.append(str(location))
-        if state:
-            search_parts.append(str(state))
-        if country:
-            search_parts.append(str(country))
+        # Build prioritized search combinations
+        search_candidates = []
+        candidate_parts = [
+            [name, location, state, country],
+            [name, state, country],
+            [name, country],
+            [name],
+            [location, state, country],
+            [location, country],
+            [location],
+            [state, country],
+            [country]
+        ]
         
-        search_string = ", ".join(search_parts)
+        for parts in candidate_parts:
+            parts = [part for part in parts if part]
+            if not parts:
+                continue
+            search_string = ", ".join(str(part) for part in parts)
+            if search_string and search_string not in search_candidates:
+                search_candidates.append(search_string)
         
-        # Try geocoding
-        location_obj = geolocator.geocode(search_string, timeout=10)
-        
-        if location_obj:
-            return location_obj.latitude, location_obj.longitude
-        
-        # Fallback: try with just location and country
-        if country and location:
-            search_string = f"{location}, {country}"
+        # Try candidates in order of specificity
+        for search_string in search_candidates:
             location_obj = geolocator.geocode(search_string, timeout=10)
-            if location_obj:
-                return location_obj.latitude, location_obj.longitude
-        
-        # Fallback: try with just location name
-        if location:
-            location_obj = geolocator.geocode(str(location), timeout=10)
             if location_obj:
                 return location_obj.latitude, location_obj.longitude
         
@@ -418,13 +416,14 @@ if st.button("🔍 Find Destinations", type="primary"):
                         # Map visualization
                         st.markdown("### 🗺️ Location")
                         dest_data = result.get('full_data', {})
-                        location_name = dest_data.get('location', '')
+                        destination_name = dest_data.get('name') or result.get('destination')
+                        region = dest_data.get('location')
                         state = dest_data.get('state')
                         country = dest_data.get('country', '')
                         
                         # Geocode location
                         with st.spinner("Loading map..."):
-                            lat, lon = geocode_location(location_name, state, country)
+                            lat, lon = geocode_location(destination_name, region, state, country)
                             
                             if lat and lon:
                                 # Create map data
@@ -435,9 +434,14 @@ if st.button("🔍 Find Destinations", type="primary"):
                                 
                                 # Display map
                                 st.map(map_data, zoom=8)
-                                st.caption(f"📍 {result['destination']} - {location_name}, {country}")
+                                caption_parts = [part for part in [region, state, country] if part]
+                                if caption_parts:
+                                    st.caption(f"📍 {destination_name} — {', '.join(caption_parts)}")
+                                else:
+                                    st.caption(f"📍 {destination_name}")
                             else:
-                                st.info(f"📍 {location_name}, {country} (Map unavailable)")
+                                display_parts = [part for part in [destination_name, region, country] if part]
+                                st.info(f"📍 {', '.join(display_parts) or 'Unknown location'} (Map unavailable)")
                         
                         # Destination details in columns with visual cards
                         col1, col2 = st.columns([2, 1])
