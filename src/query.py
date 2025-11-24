@@ -14,6 +14,8 @@ class TripPlanner:
     def __init__(self, model_name: str = DEFAULT_EMBEDDING_MODEL):
         # Initialize index
         self.index = DestinationIndex(model_name)
+        
+        # Load index (will auto-build if it doesn't exist)
         self.index.load_index()
         
         # Ensure model is initialized

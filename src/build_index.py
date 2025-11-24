@@ -205,9 +205,12 @@ class DestinationIndex:
         faiss.write_index(self.location_index, str(INDEX_PATH.with_suffix('.location.idx')))
     
     def load_index(self):
-        """Load the index and destinations from disk."""
+        """Load the index and destinations from disk. Auto-builds if index doesn't exist."""
         if not INDEX_PATH.with_suffix('.activities.idx').exists():
-            raise ValueError("Index files not found! Run build_index() first.")
+            # Auto-build index if it doesn't exist (useful for Streamlit Cloud deployments)
+            print("Index files not found. Building index automatically...")
+            self.build_index()
+            return
         
         # Load destinations
         with open(DESTINATIONS_PATH, 'r') as f:

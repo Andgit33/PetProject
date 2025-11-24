@@ -577,8 +577,14 @@ if st.button("🔍 Find Destinations", type="primary"):
                             
                             st.json(dest_data)
                 
-            except FileNotFoundError:
-                st.error("Index not found! Please build the index first by running: `python -m src.cli build`")
+            except FileNotFoundError as e:
+                st.error(f"Required files not found: {str(e)}")
+                st.info("💡 The index will be built automatically on first use. If this error persists, please ensure destination files are available in the data/destinations directory.")
+            except ValueError as e:
+                if "No destination files found" in str(e):
+                    st.error("No destination files found! Please ensure destination JSON files are in the data/destinations directory.")
+                else:
+                    st.error(f"Error: {str(e)}")
             except Exception as e:
                 st.error(f"An error occurred: {str(e)}")
                 st.exception(e)
