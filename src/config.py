@@ -1,6 +1,6 @@
 from pathlib import Path
 from typing import Optional, Dict, List
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import os
 
 # Base directories
@@ -48,8 +48,8 @@ class Destination(BaseModel):
     amenities: List[str]
     best_season: List[str]
     travel_time: Optional[str] = None
-    nearby_attractions: List[str] = []
-    keywords: List[str] = []
+    nearby_attractions: List[str] = Field(default_factory=list)
+    keywords: List[str] = Field(default_factory=list)
 
 class MatchResult(BaseModel):
     destination: str

@@ -1,3 +1,6 @@
+import json
+import logging
+
 import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
@@ -6,6 +9,9 @@ from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
 # Import backend query function
 from src.query import TripPlanner
+from src.config import DESTINATIONS_DIR
+
+logger = logging.getLogger("road_trip_planner.ui")
 
 # Initialize geocoder (with caching)
 @st.cache_resource
@@ -83,10 +89,16 @@ st.title("🗺️ Road Trip Planner")
 
 # --- Query input ---
 st.header("Describe Your Ideal Destination")
+default_prompt = (
+    "I want to drive along the coast, stopping at charming seaside towns, "
+    "lighthouses, and beaches. I'd like spots where I can walk on cliffs, take photos, "
+    "and enjoy fresh seafood."
+)
 query_text = st.text_area(
     "Enter your travel preferences", 
     height=150,
-    placeholder="e.g., I want to go hiking in the mountains with scenic views and camping facilities..."
+    placeholder="e.g., I want to go hiking in the mountains with scenic views and camping facilities...",
+    value=default_prompt
 )
 
 # --- Auto-balancing sliders for weights ---
@@ -193,21 +205,43 @@ total_weight = (
 )
 st.caption(f"Total weight: {total_weight:.2f}")
 
+@st.cache_data(show_spinner=False)
+def get_country_options():
+    """Return sorted list of countries present in destination data."""
+    countries = set()
+    if not DESTINATIONS_DIR.exists():
+        return []
+    for dest_file in DESTINATIONS_DIR.glob("*.json"):
+        try:
+            data = json.loads(dest_file.read_text())
+            country = data.get("country")
+            if country:
+                countries.add(country)
+        except Exception:
+            continue
+    return sorted(countries)
+
+
 # --- Filters ---
 st.header("🔍 Filters")
+
+dynamic_countries = get_country_options()
+fallback_countries = [
+    "USA", "France", "Japan", "Greece", "Peru", "Iceland", "Canada",
+    "Tanzania", "Indonesia", "Chile", "Argentina", "UAE", "New Zealand",
+    "Brazil", "Ecuador", "Switzerland", "Cambodia", "Italy", "Australia",
+    "Jordan", "Norway", "India", "Turkey", "Mauritius", "Croatia", "Vietnam",
+    "Morocco", "Nepal", "China", "Maldives", "Seychelles"
+]
+country_options = ["All Countries"] + (dynamic_countries if dynamic_countries else fallback_countries)
 
 filter_col1, filter_col2, filter_col3 = st.columns(3)
 
 with filter_col1:
     # Country filter
-    # We'll get available countries from the index if it exists
     filter_country = st.selectbox(
         "Filter by Country",
-        options=["All Countries"] + ["USA", "France", "Japan", "Greece", "Peru", "Iceland", "Canada", 
-                                     "Tanzania", "Indonesia", "Chile", "Argentina", "UAE", "New Zealand",
-                                     "Brazil", "Ecuador", "Switzerland", "Cambodia", "Italy", "Australia",
-                                     "Jordan", "Norway", "India", "Turkey", "Mauritius", "Croatia", "Vietnam",
-                                     "Morocco", "Nepal", "China", "Maldives", "Seychelles"],
+        options=country_options,
         index=0
     )
 
@@ -592,8 +626,15 @@ if st.button("🔍 Find Destinations", type="primary"):
                 else:
                     st.error(f"Error: {str(e)}")
             except Exception as e:
-                st.error(f"An error occurred: {str(e)}")
-                st.exception(e)
+                # Show user-friendly error message without exposing stack trace
+                error_msg = str(e)
+                # Sanitize error messages to avoid exposing sensitive paths
+                if "mount" in error_msg.lower() or "path" in error_msg.lower():
+                    st.error("An error occurred while processing your request. Please try again or contact support if the issue persists.")
+                else:
+                    st.error(f"An error occurred: {error_msg}")
+                # Full error details are logged server-side (not shown to users)
+                logger.exception("Streamlit search failed")
 
 # --- Sidebar with info ---
 with st.sidebar:

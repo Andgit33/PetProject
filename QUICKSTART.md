@@ -2,6 +2,8 @@
 
 ## 1. Setup Environment
 
+The project targets **Python 3.11** (same version Streamlit Cloud runs). Create or upgrade your environment to that version before installing dependencies:
+
 ```bash
 # Using conda (recommended)
 conda env create -f env.yml
@@ -11,9 +13,11 @@ conda activate road-trip-planner
 pip install sentence-transformers faiss-cpu numpy torch streamlit plotly rich typer pydantic geopy pandas
 ```
 
-## 2. Build the Index
+## 2. Build the Index (Optional)
 
-The project comes with **50 pre-loaded destinations** from around the world. You just need to build the index:
+The project comes with **50 pre-loaded destinations** from around the world. **The index builds automatically on first use** when you run the Streamlit app, so you can skip this step if you're using the web UI.
+
+However, you can also build it manually:
 
 ```bash
 # Using the CLI
@@ -29,7 +33,7 @@ This will:
 - Create FAISS indices for fast similarity search
 - Save everything to `data/derived/index/`
 
-**Note:** You only need to build the index once (or when you add/modify destinations).
+**Note:** The index builds automatically on first use in the Streamlit app. Manual building is only needed if you want to build it before running the app, or when you add/modify destinations.
 
 ## 3. Query Destinations
 
@@ -45,8 +49,9 @@ This will open a browser window with an interactive interface where you can:
 - View results with visual score breakdowns (charts, gauges, progress bars)
 - See interactive maps for each destination
 - Filter by country, budget level, and best season
-- Share or download results
+- Download results as text file
 - See detailed destination information with full metadata
+- **Note:** On first run, the index will build automatically (you'll see a progress message)
 
 ### Using the CLI
 

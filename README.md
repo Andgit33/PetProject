@@ -1,259 +1,147 @@
 # Road Trip Planner 🗺️
 
-A RAG-based road trip planning tool that helps you discover destinations based on your preferences using semantic search and cosine similarity. The Streamlit UI includes improved geocoding + captions for maps, granular filters, and visual score breakdowns so you can explore each recommendation at a glance.
+Discover destinations that actually match your travel vibe. Road Trip Planner combines a curated catalog of 50 hand-crafted locations with semantic search, weighted scoring, and an expressive Streamlit UI so you can describe your ideal getaway and get tailored suggestions instantly.
 
-## Overview
+---
 
-This project uses Retrieval Augmented Generation (RAG) to match your travel preferences with destination information stored in a vector database. It processes destination data, creates embeddings using sentence transformers, and matches queries using cosine similarity across multiple aspects:
+## Why Road Trip Planner?
 
-- **Activities**: What you can do at the destination
-- **Scenery**: Natural features, views, and landscapes
-- **Amenities**: Facilities, services, and accommodations
-- **Location**: Geographic context and accessibility
+- **Natural-language friendly** – write “I want volcanic landscapes with hot springs and night skies” and get relevant matches.
+- **Multi-aspect ranking** – activities, scenery, amenities, and location each have their own embedding + adjustable weight so you control the blend.
+- **Actionable insights** – visual score breakdowns, inferred budget level, best season, nearby attractions, and downloadable summaries.
+- **Ready for deployment** – Streamlit UI builds the FAISS index automatically on first run, so it works out-of-the-box on Streamlit Community Cloud or any custom host.
 
-**Includes 50 diverse destinations** from around the world, covering all continents and various travel types (cities, beaches, mountains, cultural sites, adventure destinations, and more).
+---
 
-## Project Structure
+## How It Works
+
+1. **Destination catalog** – `data/destinations/` holds JSON profiles describing activities, scenery, amenities, and metadata for 50 destinations.
+2. **Index building** – `src/build_index.py` turns each profile into four embeddings (activities, scenery, amenities, location) using `sentence-transformers/paraphrase-MiniLM-L3-v2` and stores them in FAISS indices under `data/derived/index/`.
+3. **Semantic search** – `TripPlanner` (in `src/query.py`) embeds your query, performs cosine-similarity search across every destination, applies your weights, and returns ranked matches.
+4. **Streamlit experience** – `UI.py` wraps the search in a friendly interface, adds filters (country, budget, season), geocodes destinations for map previews, and handles sharing/downloading the results.
+
+---
+
+## Repository Tour
 
 ```
 road_trip_planner/
+├── UI.py                  # Streamlit app
 ├── src/
-│   ├── __init__.py
-│   ├── config.py          # Configuration and paths
-│   ├── build_index.py     # Build vector index from destinations
-│   ├── query.py           # Query destinations
-│   └── cli.py             # Command-line interface
+│   ├── config.py          # Paths, defaults, Pydantic models
+│   ├── build_index.py     # DestinationIndex builder
+│   ├── query.py           # TripPlanner search logic
+│   └── cli.py             # Typer-powered CLI
 ├── data/
-│   ├── destinations/       # JSON files with destination data
-│   └── derived/
-│       └── index/        # Generated FAISS indices
-├── notebooks/            # Jupyter notebooks for exploration
-├── tests/                # Unit tests
-├── UI.py                 # Streamlit web interface
-├── build_index.py        # Standalone build script
-├── query_example.py      # Example query script
-└── README.md
+│   ├── destinations/      # Source JSON files (tracked)
+│   └── derived/index/     # Generated FAISS indices + cache (gitignored)
+├── build_index.py         # Convenience script to rebuild the index
+├── query_example.py       # Quick script showing API usage
+├── requirements.txt       # Pip environment (Python 3.11)
+└── env.yml                # Conda environment (Python 3.11)
 ```
 
-## Setup
+---
 
-1. **Install dependencies:**
+## Getting Started
 
-Using conda (recommended):
+### Requirements
+- Python **3.11** (matches Streamlit Cloud)
+- Conda **or** virtualenv
+- Internet access for the geocoding feature (Nominatim)
+
+### Installation
 ```bash
+# Option 1: Conda
 conda env create -f env.yml
 conda activate road-trip-planner
-```
 
-Or using pip:
-```bash
+# Option 2: Pip/venv
+python3.11 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-2. **Build the index:**
-   
-   The project comes with 50 pre-loaded destinations. Build the index to create searchable vectors:
-   
+### Build the Index (optional)
+The Streamlit UI will build the FAISS indices automatically the first time you run a search. If you want to pre-build them (for faster cold starts or local CLI usage):
+
 ```bash
 python -m src.cli build
+# or
+python build_index.py
 ```
 
-   Or using Python:
-```python
-from src.build_index import DestinationIndex
+---
 
-index = DestinationIndex()
-index.build_index()
-```
+## Using the App
 
-   **Note:** The index only needs to be built once (or when you add/modify destinations).
-
-## Usage
-
-### Web UI (Recommended)
-
-Launch the Streamlit interface:
-
+### Streamlit UI (recommended)
 ```bash
 streamlit run UI.py
 ```
 
-The UI provides:
-- **Interactive search interface** with natural language queries
-- **Adjustable weight sliders** for different aspects (activities, scenery, amenities, location)
-- **Visual score breakdowns** with interactive charts and gauges
-- **Interactive maps** showing each destination's location
-- **Filters** for country, budget level, and best season
-- **Budget indicators** automatically inferred from amenities
-- **Share & Download** functionality for results
-- **Detailed destination information** with full metadata
+From there you can:
+1. **Describe your trip** in natural language.
+2. **Adjust weights** so the ranking favors activities, scenery, amenities, or location.
+3. **Apply filters** (country list is populated from the destination files, budget tier is inferred automatically, season filters exact matches).
+4. **Explore results** – each destination shows a match score, charted breakdowns, inferred budget badge, key facts, map, and expandable metadata.
+5. **Download** the top matches as a text summary to share with friends or keep for planning.
 
-### Command Line Interface
-
+### CLI
 ```bash
-# Build index
-python -m src.cli build
-
-# Search destinations
 python -m src.cli search "I want to go hiking in the mountains"
-
-# Interactive mode
 python -m src.cli interactive
 ```
+The CLI uses the same TripPlanner engine and prints tables, score breakdowns, and rich-formatted explanations.
 
 ### Python API
-
 ```python
 from src.query import TripPlanner
 
 planner = TripPlanner()
 results = planner.search_destinations(
-    "I want to go hiking in the mountains with scenic views",
+    "Beach destination with water sports and good restaurants",
     top_k=5
 )
-
-for result in results:
-    print(f"{result['destination']} - Score: {result['score']:.3f}")
-    print(result['explanation'])
-    print()
+for match in results:
+    print(match["destination"], match["score"])
 ```
 
-### Example Queries
+---
 
-- "I'm looking for beach destinations with water sports"
-- "Mountain hiking trails with camping facilities"
-- "Historic towns with good restaurants"
-- "National parks with wildlife viewing"
+## Destination Data
 
-## Destination Data Format
+Each JSON file in `data/destinations/` represents one location. Fields include:
 
-Each destination should be a JSON file with the following structure:
+- `name`, `location`, `state`, `country`
+- `description`
+- Lists for `activities`, `scenery`, `amenities`, `best_season`, `nearby_attractions`, `keywords`
+- Optional `travel_time`
 
-```json
-{
-  "name": "Yosemite National Park",
-  "location": "California",
-  "state": "CA",
-  "country": "USA",
-  "description": "Iconic national park known for granite cliffs, waterfalls, and giant sequoias.",
-  "activities": [
-    "hiking",
-    "rock climbing",
-    "camping",
-    "photography",
-    "wildlife viewing"
-  ],
-  "scenery": [
-    "mountains",
-    "waterfalls",
-    "valleys",
-    "giant sequoias",
-    "granite cliffs"
-  ],
-  "amenities": [
-    "campgrounds",
-    "visitor centers",
-    "lodging",
-    "restaurants",
-    "shuttle service"
-  ],
-  "best_season": ["spring", "summer", "fall"],
-  "travel_time": "4-5 hours from San Francisco",
-  "nearby_attractions": [
-    "Half Dome",
-    "El Capitan",
-    "Yosemite Falls"
-  ],
-  "keywords": [
-    "national park",
-    "outdoor adventure",
-    "nature",
-    "hiking"
-  ]
-}
-```
+Add new destinations by copying an existing file, editing the values, and rerunning `python -m src.cli build` (or just restarting the Streamlit app and letting auto-build handle it).
 
-## Features
-
-- **Multi-aspect matching**: Searches across activities, scenery, amenities, and location
-- **Weighted scoring**: Configurable weights that actually impact results (searches all destinations, not just top-k)
-- **Cosine similarity**: Uses normalized embeddings for semantic matching
-- **FAISS indexing**: Fast similarity search using Facebook AI Similarity Search
-- **Interactive maps**: Geocoded location maps for each destination
-- **Smart filtering**: Filter by country, budget level, and best season
-- **Budget inference**: Automatically determines budget level from amenities
-- **Visual analytics**: Charts, gauges, and progress bars for score visualization
-- **Share & export**: Share results or download as text file
-- **50 diverse destinations**: Pre-loaded with destinations from around the world
-- **Extensible**: Easy to add new destinations or modify search criteria
-
-## Key Features Explained
-
-### Weighted Search
-The search system considers **all destinations** when applying weights, not just the top results. This means:
-- High Activities weight → Destinations strong in activities rise to the top
-- High Scenery weight → Scenic destinations get prioritized
-- Weights have real impact on which destinations appear in results
-
-### Budget Indicators
-Automatically infers budget level from:
-- **Luxury**: Luxury hotels, resorts, spas, overwater villas
-- **Budget-Friendly**: Campgrounds, hostels, budget accommodations
-- **Mid-Range**: Everything else
-
-### Maps
-Each destination includes an interactive map showing its location, geocoded from the location/state/country information.
-
-### Filters
-- **Country**: Filter by specific countries
-- **Budget**: Filter by budget level (Budget-Friendly, Mid-Range, Luxury)
-- **Season**: Filter by best season to visit
-
-## Future Enhancements
-
-- [x] Add budget considerations
-- [x] Integration with mapping services
-- [x] Seasonal recommendations (via filters)
-- [ ] Add route planning between destinations
-- [ ] Integrate weather data
-- [ ] Multi-day trip planning
-- [ ] User preference learning
-- [ ] Photo galleries for destinations
-- [ ] Travel time/distance calculator between destinations
-
-## Deployment
-
-- **Local Streamlit:** `streamlit run UI.py`
-- **Streamlit Community Cloud:** point the app to `UI.py`, and let it install from `requirements.txt`. The file mirrors `env.yml`, keeping conda and pip installs in sync.
-- **Custom hosting (Docker, Render, etc.):** install via `conda env create -f env.yml` or `pip install -r requirements.txt`, run `python -m src.cli build`, then launch the Streamlit UI or CLI.
-
-## Requirements
-
-- Python 3.10+
-- Dependency lists live in `env.yml` (conda) and `requirements.txt` (pip/Streamlit)
-- Internet connection for geocoding (maps feature)
+---
 
 ## Troubleshooting
 
-**Index not found error:**
-```bash
-python -m src.cli build
-```
+- **“Index not found”** – the auto-build will kick in as long as `data/destinations/` exists. If it doesn’t, copy the JSON files from the repo.
+- **Geocoding errors** – requires internet access. The app hides the map if Nominatim fails and continues gracefully.
+- **Weights feel ineffective** – make sure you let the search finish after changing sliders. The system searches *every* destination before applying weights, so they should have noticeable impact once the index is ready.
+- **First run feels slow** – embedding + FAISS build can take a couple of minutes on Streamlit Cloud; subsequent searches are instant because everything is cached.
 
-**Geocoding fails:**
-- Maps require internet connection
-- Some locations may not geocode correctly
-- The app will continue without maps if geocoding fails
+---
 
-**Weights not working:**
-- Make sure you've rebuilt the index after any code changes
-- Weights now search all destinations, so they should have visible impact
+## Roadmap
 
-## Contributing
+- Route planning between suggested destinations
+- Weather overlays for the chosen season
+- Multi-day itinerary builder
+- On-device photo previews for each destination
+- Personalization loop that learns from thumbs-up/down feedback
 
-Feel free to add more destinations by creating JSON files in `data/destinations/` following the format shown in the examples.
+---
 
 ## License
 
-MIT License
+MIT License – see `LICENSE`.
 
