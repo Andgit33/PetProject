@@ -30,7 +30,10 @@
     "shops",
     "camel rentals"
   ],
-  "best_season": ["spring", "fall"],
+  "best_season": [
+    "spring",
+    "fall"
+  ],
   "travel_time": "Flight to Amman, then drive",
   "nearby_attractions": [
     "The Treasury",
@@ -47,6 +50,7 @@
     "unesco",
     "historic",
     "wonder"
-  ]
+  ],
+  "latitude": 30.3258363,
+  "longitude": 35.4745669
 }
-

@@ -31,7 +31,11 @@
     "shops",
     "marinas"
   ],
-  "best_season": ["spring", "summer", "early fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "early fall"
+  ],
   "travel_time": "Flight to Naples, then drive or ferry",
   "nearby_attractions": [
     "Positano",
@@ -48,6 +52,7 @@
     "scenic",
     "beach",
     "villages"
-  ]
+  ],
+  "latitude": 40.6681641,
+  "longitude": 14.7213286
 }
-

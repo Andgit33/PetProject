@@ -32,7 +32,10 @@
     "theme parks",
     "public transportation"
   ],
-  "best_season": ["winter", "november to march"],
+  "best_season": [
+    "winter",
+    "november to march"
+  ],
   "travel_time": "International flights to Dubai",
   "nearby_attractions": [
     "Burj Khalifa",
@@ -49,6 +52,7 @@
     "shopping",
     "desert",
     "entertainment"
-  ]
+  ],
+  "latitude": 25.1079201,
+  "longitude": 55.4138761
 }
-

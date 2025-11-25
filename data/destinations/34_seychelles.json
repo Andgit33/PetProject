@@ -31,14 +31,17 @@
     "dive centers",
     "beach clubs"
   ],
-  "best_season": ["april to may", "october to november"],
-  "travel_time": "International flights to Mahé",
+  "best_season": [
+    "april to may",
+    "october to november"
+  ],
+  "travel_time": "International flights to Mah\u00e9",
   "nearby_attractions": [
-    "Mahé",
+    "Mah\u00e9",
     "Praslin",
     "La Digue",
     "Aldabra Atoll",
-    "Vallée de Mai",
+    "Vall\u00e9e de Mai",
     "Anse Source d'Argent"
   ],
   "keywords": [
@@ -48,6 +51,7 @@
     "tropical",
     "paradise",
     "pristine"
-  ]
+  ],
+  "latitude": -4.6574977,
+  "longitude": 55.4540146
 }
-

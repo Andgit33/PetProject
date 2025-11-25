@@ -31,11 +31,14 @@
     "campgrounds",
     "visitor centers"
   ],
-  "best_season": ["summer", "may to september"],
+  "best_season": [
+    "summer",
+    "may to september"
+  ],
   "travel_time": "Flight to Bergen or Oslo, then cruise or drive",
   "nearby_attractions": [
     "Geirangerfjord",
-    "Nærøyfjord",
+    "N\u00e6r\u00f8yfjord",
     "Bergen",
     "Flam Railway",
     "Trolltunga",
@@ -48,6 +51,7 @@
     "cruising",
     "mountains",
     "nordic"
-  ]
+  ],
+  "latitude": 62.1266102,
+  "longitude": 7.1658394
 }
-

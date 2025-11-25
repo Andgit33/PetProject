@@ -30,11 +30,15 @@
     "balloon companies",
     "shops"
   ],
-  "best_season": ["spring", "summer", "fall"],
-  "travel_time": "Flight to Kayseri or Nevşehir",
+  "best_season": [
+    "spring",
+    "summer",
+    "fall"
+  ],
+  "travel_time": "Flight to Kayseri or Nev\u015fehir",
   "nearby_attractions": [
-    "Göreme",
-    "Uçhisar Castle",
+    "G\u00f6reme",
+    "U\u00e7hisar Castle",
     "Derinkuyu Underground City",
     "Ihlara Valley",
     "Pasabag",
@@ -47,6 +51,7 @@
     "historic",
     "scenic",
     "adventure"
-  ]
+  ],
+  "latitude": 38.6386124,
+  "longitude": 34.8455184
 }
-

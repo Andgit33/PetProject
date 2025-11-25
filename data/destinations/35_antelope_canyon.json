@@ -27,7 +27,11 @@
     "restaurants nearby",
     "hotels nearby"
   ],
-  "best_season": ["spring", "summer", "fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "fall"
+  ],
   "travel_time": "2.5 hours from Las Vegas, 2 hours from Page",
   "nearby_attractions": [
     "Upper Antelope Canyon",
@@ -44,6 +48,7 @@
     "desert",
     "light beams",
     "sandstone"
-  ]
+  ],
+  "latitude": 36.930266,
+  "longitude": -111.4219676
 }
-

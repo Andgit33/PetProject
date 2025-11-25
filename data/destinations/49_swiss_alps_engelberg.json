@@ -30,7 +30,9 @@
     "monastery",
     "shops"
   ],
-  "best_season": ["year round"],
+  "best_season": [
+    "year round"
+  ],
   "travel_time": "Train from Lucerne",
   "nearby_attractions": [
     "Mount Titlis",
@@ -47,6 +49,7 @@
     "glacier",
     "mountains",
     "year-round"
-  ]
+  ],
+  "latitude": 46.8223497,
+  "longitude": 8.4043996
 }
-

@@ -1,6 +1,6 @@
 {
   "name": "Paris",
-  "location": "Île-de-France",
+  "location": "\u00cele-de-France",
   "state": null,
   "country": "France",
   "description": "The City of Light, known for art, fashion, gastronomy, and culture. Home to iconic landmarks like the Eiffel Tower, Louvre Museum, and Notre-Dame.",
@@ -32,13 +32,17 @@
     "museums",
     "theaters"
   ],
-  "best_season": ["spring", "summer", "fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "fall"
+  ],
   "travel_time": "International flights from major cities",
   "nearby_attractions": [
     "Eiffel Tower",
     "Louvre Museum",
     "Notre-Dame Cathedral",
-    "Champs-Élysées",
+    "Champs-\u00c9lys\u00e9es",
     "Montmartre",
     "Versailles"
   ],
@@ -49,6 +53,7 @@
     "romantic",
     "historic",
     "urban"
-  ]
+  ],
+  "latitude": 48.8534951,
+  "longitude": 2.3483915
 }
-

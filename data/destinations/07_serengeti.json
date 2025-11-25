@@ -30,7 +30,10 @@
     "safari vehicles",
     "guides"
   ],
-  "best_season": ["dry season", "june to october"],
+  "best_season": [
+    "dry season",
+    "june to october"
+  ],
   "travel_time": "Flight to Kilimanjaro or Arusha, then drive",
   "nearby_attractions": [
     "Ngorongoro Crater",
@@ -46,6 +49,7 @@
     "migration",
     "big five",
     "nature"
-  ]
+  ],
+  "latitude": -2.3712909,
+  "longitude": 34.6983828
 }
-

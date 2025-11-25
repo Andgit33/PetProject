@@ -30,12 +30,15 @@
     "hot springs",
     "visitor centers"
   ],
-  "best_season": ["winter", "september to march"],
+  "best_season": [
+    "winter",
+    "september to march"
+  ],
   "travel_time": "Flight to Reykjavik",
   "nearby_attractions": [
     "Golden Circle",
     "Blue Lagoon",
-    "Jökulsárlón",
+    "J\u00f6kuls\u00e1rl\u00f3n",
     "Reykjavik",
     "Thingvellir",
     "Geysir"
@@ -47,6 +50,7 @@
     "glaciers",
     "unique",
     "photography"
-  ]
+  ],
+  "latitude": 64.1563842,
+  "longitude": -21.9446856
 }
-

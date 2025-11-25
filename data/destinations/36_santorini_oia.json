@@ -30,7 +30,11 @@
     "art galleries",
     "wineries"
   ],
-  "best_season": ["spring", "summer", "early fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "early fall"
+  ],
   "travel_time": "Flight to Santorini, then drive or bus",
   "nearby_attractions": [
     "Fira",
@@ -47,6 +51,7 @@
     "scenic",
     "mediterranean",
     "iconic"
-  ]
+  ],
+  "latitude": 36.4622122,
+  "longitude": 25.3757257
 }
-

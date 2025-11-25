@@ -32,7 +32,10 @@
     "yoga studios",
     "markets"
   ],
-  "best_season": ["dry season", "april to october"],
+  "best_season": [
+    "dry season",
+    "april to october"
+  ],
   "travel_time": "International flights to Denpasar",
   "nearby_attractions": [
     "Ubud",
@@ -49,6 +52,7 @@
     "culture",
     "spiritual",
     "relaxation"
-  ]
+  ],
+  "latitude": -8.2271303,
+  "longitude": 115.1919203
 }
-

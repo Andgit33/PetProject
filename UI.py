@@ -4,19 +4,12 @@ import logging
 import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
-from geopy.geocoders import Nominatim
-from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
 # Import backend query function
 from src.query import TripPlanner
 from src.config import DESTINATIONS_DIR
 
 logger = logging.getLogger("road_trip_planner.ui")
-
-# Initialize geocoder (with caching)
-@st.cache_resource
-def get_geocoder():
-    return Nominatim(user_agent="road_trip_planner")
 
 def infer_budget_level(destination_data):
     """Infer budget level from amenities and description."""
@@ -44,46 +37,6 @@ def infer_budget_level(destination_data):
     # Default to mid-range
     return "Mid-Range"
 
-@st.cache_data(ttl=3600)  # Cache for 1 hour
-def geocode_location(name=None, location=None, state=None, country=None):
-    """Geocode a destination by prioritizing its proper name, with regional fallbacks."""
-    try:
-        geolocator = get_geocoder()
-        
-        # Build prioritized search combinations
-        search_candidates = []
-        candidate_parts = [
-            [name, location, state, country],
-            [name, state, country],
-            [name, country],
-            [name],
-            [location, state, country],
-            [location, country],
-            [location],
-            [state, country],
-            [country]
-        ]
-        
-        for parts in candidate_parts:
-            parts = [part for part in parts if part]
-            if not parts:
-                continue
-            search_string = ", ".join(str(part) for part in parts)
-            if search_string and search_string not in search_candidates:
-                search_candidates.append(search_string)
-        
-        # Try candidates in order of specificity
-        for search_string in search_candidates:
-            location_obj = geolocator.geocode(search_string, timeout=10)
-            if location_obj:
-                return location_obj.latitude, location_obj.longitude
-        
-        return None, None
-        
-    except (GeocoderTimedOut, GeocoderServiceError, Exception) as e:
-        # Don't show warning in cached function, just return None
-        return None, None
-
 st.set_page_config(page_title="Road Trip Planner", layout="wide")
 st.title("🗺️ Road Trip Planner")
 
@@ -102,7 +55,7 @@ query_text = st.text_area(
 )
 
 # --- Auto-balancing sliders for weights ---
-st.header("Adjust Search Weights (Sum must be at most 1)")
+st.header("Adjust Search Weights")
 
 # Initialize session state
 if "activities_weight" not in st.session_state:
@@ -278,7 +231,11 @@ if st.button("🔍 Find Destinations", type="primary"):
         from src.config import INDEX_PATH
         index_exists = INDEX_PATH.with_suffix('.activities.idx').exists()
         
-        spinner_message = "🔨 Building search index for the first time. This may take a few minutes..." if not index_exists else "Searching destinations..."
+        # Build appropriate spinner message
+        if not index_exists:
+            spinner_message = "🔨 Building search index and geocoding destinations for maps. This may take several minutes (geocoding is rate-limited to 1 request/second)..."
+        else:
+            spinner_message = "Searching destinations..."
         
         with st.spinner(spinner_message):
             try:
@@ -505,27 +462,28 @@ if st.button("🔍 Find Destinations", type="primary"):
                         state = dest_data.get('state')
                         country = dest_data.get('country', '')
                         
-                        # Geocode location
-                        with st.spinner("Loading map..."):
-                            lat, lon = geocode_location(destination_name, region, state, country)
+                        # Get stored coordinates (geocoded automatically during index build)
+                        lat = dest_data.get('latitude')
+                        lon = dest_data.get('longitude')
+                        
+                        if lat and lon:
+                            # Create map data
+                            map_data = pd.DataFrame({
+                                'lat': [lat],
+                                'lon': [lon]
+                            })
                             
-                            if lat and lon:
-                                # Create map data
-                                map_data = pd.DataFrame({
-                                    'lat': [lat],
-                                    'lon': [lon]
-                                })
-                                
-                                # Display map
-                                st.map(map_data, zoom=8)
-                                caption_parts = [part for part in [region, state, country] if part]
-                                if caption_parts:
-                                    st.caption(f"📍 {destination_name} — {', '.join(caption_parts)}")
-                                else:
-                                    st.caption(f"📍 {destination_name}")
+                            # Display map
+                            st.map(map_data, zoom=8)
+                            caption_parts = [part for part in [region, state, country] if part]
+                            if caption_parts:
+                                st.caption(f"📍 {destination_name} — {', '.join(caption_parts)}")
                             else:
-                                display_parts = [part for part in [destination_name, region, country] if part]
-                                st.info(f"📍 {', '.join(display_parts) or 'Unknown location'} (Map unavailable)")
+                                st.caption(f"📍 {destination_name}")
+                        else:
+                            # Coordinates should be present after index build, but show message if missing
+                            display_parts = [part for part in [destination_name, region, country] if part]
+                            st.info(f"📍 {', '.join(display_parts) or 'Unknown location'} (Map unavailable - coordinates not found. Rebuild index to geocode destinations.)")
                         
                         # Destination details in columns with visual cards
                         col1, col2 = st.columns([2, 1])

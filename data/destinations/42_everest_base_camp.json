@@ -29,7 +29,10 @@
     "restaurants",
     "campgrounds"
   ],
-  "best_season": ["spring", "fall"],
+  "best_season": [
+    "spring",
+    "fall"
+  ],
   "travel_time": "Flight to Kathmandu, then to Lukla",
   "nearby_attractions": [
     "Mount Everest",
@@ -46,6 +49,7 @@
     "adventure",
     "challenging",
     "iconic"
-  ]
+  ],
+  "latitude": 27.9996646,
+  "longitude": 86.8487946
 }
-

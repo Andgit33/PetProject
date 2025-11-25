@@ -32,7 +32,10 @@
     "public transportation",
     "museums"
   ],
-  "best_season": ["spring", "fall"],
+  "best_season": [
+    "spring",
+    "fall"
+  ],
   "travel_time": "Flight to Osaka, then train to Kyoto",
   "nearby_attractions": [
     "Fushimi Inari Shrine",
@@ -49,6 +52,7 @@
     "historic",
     "gardens",
     "japan"
-  ]
+  ],
+  "latitude": 35.0115754,
+  "longitude": 135.7681441
 }
-

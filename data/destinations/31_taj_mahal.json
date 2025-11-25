@@ -29,7 +29,10 @@
     "shops",
     "parking"
   ],
-  "best_season": ["winter", "october to march"],
+  "best_season": [
+    "winter",
+    "october to march"
+  ],
   "travel_time": "3 hours from Delhi",
   "nearby_attractions": [
     "Agra Fort",
@@ -46,6 +49,7 @@
     "wonder",
     "romantic",
     "cultural"
-  ]
+  ],
+  "latitude": 27.1750075,
+  "longitude": 78.0421013
 }
-

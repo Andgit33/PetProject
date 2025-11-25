@@ -30,14 +30,16 @@
     "train station",
     "hotels nearby"
   ],
-  "best_season": ["year round"],
+  "best_season": [
+    "year round"
+  ],
   "travel_time": "Train from Interlaken",
   "nearby_attractions": [
     "Interlaken",
     "Grindelwald",
     "Lauterbrunnen",
     "Eiger",
-    "Mönch",
+    "M\u00f6nch",
     "Jungfrau"
   ],
   "keywords": [
@@ -47,6 +49,7 @@
     "snow",
     "panoramic",
     "unique"
-  ]
+  ],
+  "latitude": 46.5475788,
+  "longitude": 7.9789741
 }
-

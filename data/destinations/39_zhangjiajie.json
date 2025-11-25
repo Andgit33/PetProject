@@ -30,7 +30,11 @@
     "visitor centers",
     "shuttle buses"
   ],
-  "best_season": ["spring", "summer", "fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "fall"
+  ],
   "travel_time": "Flight to Zhangjiajie or train from major cities",
   "nearby_attractions": [
     "Tianmen Mountain",
@@ -47,6 +51,7 @@
     "hiking",
     "scenic",
     "pillars"
-  ]
+  ],
+  "latitude": 29.373828,
+  "longitude": 110.530142
 }
-

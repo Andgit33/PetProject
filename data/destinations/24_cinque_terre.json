@@ -31,7 +31,11 @@
     "shops",
     "train service"
   ],
-  "best_season": ["spring", "summer", "early fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "early fall"
+  ],
   "travel_time": "Train from Genoa or Pisa",
   "nearby_attractions": [
     "Monterosso",
@@ -48,6 +52,7 @@
     "mediterranean",
     "scenic",
     "unesco"
-  ]
+  ],
+  "latitude": 44.1222144,
+  "longitude": 9.7132501
 }
-

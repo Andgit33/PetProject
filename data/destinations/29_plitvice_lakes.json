@@ -29,7 +29,11 @@
     "parking",
     "shuttle buses"
   ],
-  "best_season": ["spring", "summer", "fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "fall"
+  ],
   "travel_time": "2 hours from Zagreb or Zadar",
   "nearby_attractions": [
     "Upper Lakes",
@@ -46,6 +50,7 @@
     "unesco",
     "hiking",
     "scenic"
-  ]
+  ],
+  "latitude": 44.8523012,
+  "longitude": 15.590349
 }
-

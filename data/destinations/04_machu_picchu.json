@@ -30,7 +30,10 @@
     "train service",
     "visitor center"
   ],
-  "best_season": ["dry season", "may to september"],
+  "best_season": [
+    "dry season",
+    "may to september"
+  ],
   "travel_time": "Flight to Cusco, then train or trek",
   "nearby_attractions": [
     "Inca Trail",
@@ -47,6 +50,7 @@
     "ancient",
     "adventure",
     "unesco"
-  ]
+  ],
+  "latitude": -13.164341,
+  "longitude": -72.5450094
 }
-

@@ -31,7 +31,10 @@
     "shops",
     "train station"
   ],
-  "best_season": ["summer", "winter"],
+  "best_season": [
+    "summer",
+    "winter"
+  ],
   "travel_time": "Train from Zurich or Bern",
   "nearby_attractions": [
     "Jungfraujoch",
@@ -48,6 +51,7 @@
     "lakes",
     "adrenaline",
     "scenic"
-  ]
+  ],
+  "latitude": 46.6855231,
+  "longitude": 7.8585139
 }
-

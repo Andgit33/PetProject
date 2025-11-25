@@ -31,7 +31,10 @@
     "tour guides",
     "desert camps"
   ],
-  "best_season": ["winter", "october to march"],
+  "best_season": [
+    "winter",
+    "october to march"
+  ],
   "travel_time": "Flight to Jaipur, Jodhpur, or Udaipur",
   "nearby_attractions": [
     "Jaipur",
@@ -48,6 +51,7 @@
     "historic",
     "royal",
     "colorful"
-  ]
+  ],
+  "latitude": 24.8768151,
+  "longitude": 75.6294284
 }
-

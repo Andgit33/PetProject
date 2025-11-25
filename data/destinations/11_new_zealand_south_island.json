@@ -31,7 +31,10 @@
     "tour operators",
     "visitor centers"
   ],
-  "best_season": ["summer", "december to february"],
+  "best_season": [
+    "summer",
+    "december to february"
+  ],
   "travel_time": "Flight to Christchurch or Queenstown",
   "nearby_attractions": [
     "Milford Sound",
@@ -48,6 +51,7 @@
     "outdoor",
     "fjords",
     "mountains"
-  ]
+  ],
+  "latitude": -43.586562,
+  "longitude": 171.2123294
 }
-

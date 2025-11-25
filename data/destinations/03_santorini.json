@@ -31,7 +31,11 @@
     "beach clubs",
     "shops"
   ],
-  "best_season": ["spring", "summer", "early fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "early fall"
+  ],
   "travel_time": "Flight to Athens then ferry or direct flights",
   "nearby_attractions": [
     "Oia",
@@ -48,6 +52,7 @@
     "sunset",
     "mediterranean",
     "scenic"
-  ]
+  ],
+  "latitude": 36.4071112,
+  "longitude": 25.4566637
 }
-

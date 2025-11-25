@@ -32,11 +32,14 @@
     "gas stations",
     "visitor centers"
   ],
-  "best_season": ["summer", "winter for northern lights"],
+  "best_season": [
+    "summer",
+    "winter for northern lights"
+  ],
   "travel_time": "Flight to Reykjavik, then car rental",
   "nearby_attractions": [
     "Golden Circle",
-    "Jökulsárlón Glacier Lagoon",
+    "J\u00f6kuls\u00e1rl\u00f3n Glacier Lagoon",
     "Blue Lagoon",
     "Gullfoss",
     "Geysir",
@@ -49,6 +52,7 @@
     "northern lights",
     "glaciers",
     "scenic drive"
-  ]
+  ],
+  "latitude": 52.1920013,
+  "longitude": -2.2311946
 }
-

@@ -31,7 +31,9 @@
     "kayak rentals",
     "visitor centers"
   ],
-  "best_season": ["october to april"],
+  "best_season": [
+    "october to april"
+  ],
   "travel_time": "3-4 hours from Hanoi",
   "nearby_attractions": [
     "Sung Sot Cave",
@@ -48,6 +50,7 @@
     "unesco",
     "scenic",
     "mystical"
-  ]
+  ],
+  "latitude": 20.9084384,
+  "longitude": 107.0682782
 }
-

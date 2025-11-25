@@ -30,12 +30,16 @@
     "shops",
     "visitor centers"
   ],
-  "best_season": ["summer", "spring", "fall"],
+  "best_season": [
+    "summer",
+    "spring",
+    "fall"
+  ],
   "travel_time": "Train from Interlaken",
   "nearby_attractions": [
     "Staubbach Falls",
-    "Trümmelbach Falls",
-    "Mürren",
+    "Tr\u00fcmmelbach Falls",
+    "M\u00fcrren",
     "Wengen",
     "Jungfraujoch",
     "Schilthorn"
@@ -47,6 +51,7 @@
     "hiking",
     "scenic",
     "dramatic"
-  ]
+  ],
+  "latitude": 46.5939043,
+  "longitude": 7.9078016
 }
-

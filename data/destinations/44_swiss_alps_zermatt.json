@@ -31,7 +31,10 @@
     "shops",
     "cable cars"
   ],
-  "best_season": ["summer", "winter"],
+  "best_season": [
+    "summer",
+    "winter"
+  ],
   "travel_time": "Train from Visp or Brig",
   "nearby_attractions": [
     "Matterhorn",
@@ -48,6 +51,7 @@
     "luxury",
     "mountains",
     "charming"
-  ]
+  ],
+  "latitude": 46.0212076,
+  "longitude": 7.749254
 }
-

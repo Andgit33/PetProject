@@ -32,7 +32,11 @@
     "cable cars",
     "train station"
   ],
-  "best_season": ["spring", "summer", "fall"],
+  "best_season": [
+    "spring",
+    "summer",
+    "fall"
+  ],
   "travel_time": "Train from Zurich or Bern",
   "nearby_attractions": [
     "Chapel Bridge",
@@ -49,6 +53,7 @@
     "historic",
     "charming",
     "cultural"
-  ]
+  ],
+  "latitude": 47.0505452,
+  "longitude": 8.3054682
 }
-

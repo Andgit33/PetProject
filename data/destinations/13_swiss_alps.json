@@ -32,7 +32,10 @@
     "trains",
     "visitor centers"
   ],
-  "best_season": ["summer", "winter"],
+  "best_season": [
+    "summer",
+    "winter"
+  ],
   "travel_time": "Flight to Zurich or Geneva, then train",
   "nearby_attractions": [
     "Matterhorn",
@@ -49,6 +52,7 @@
     "hiking",
     "scenic",
     "europe"
-  ]
+  ],
+  "latitude": 46.944057,
+  "longitude": 7.4481778
 }
-

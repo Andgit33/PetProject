@@ -31,7 +31,10 @@
     "cable cars",
     "public transportation"
   ],
-  "best_season": ["summer", "december to march"],
+  "best_season": [
+    "summer",
+    "december to march"
+  ],
   "travel_time": "International flights to Rio",
   "nearby_attractions": [
     "Christ the Redeemer",
@@ -48,6 +51,7 @@
     "culture",
     "tropical",
     "iconic"
-  ]
+  ],
+  "latitude": -22.9110137,
+  "longitude": -43.2093727
 }
-

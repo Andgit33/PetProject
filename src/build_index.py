@@ -6,6 +6,9 @@ from sentence_transformers import SentenceTransformer
 from typing import List, Dict, Optional
 import torch
 import gc
+import time
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 from src.config import (
     DESTINATIONS_DIR,
     DERIVED_DIR,
@@ -72,6 +75,58 @@ class DestinationIndex:
                 torch.cuda.empty_cache()
             gc.collect()
     
+    def _geocode_destination(self, destination: Dict) -> tuple[Optional[float], Optional[float]]:
+        """Geocode a destination and return lat/lon. Returns (None, None) if geocoding fails."""
+        # Skip if already has coordinates
+        if 'latitude' in destination and 'longitude' in destination:
+            return destination['latitude'], destination['longitude']
+        
+        try:
+            geolocator = Nominatim(user_agent="road_trip_planner_index_build/1.0")
+            
+            name = destination.get('name')
+            location = destination.get('location')
+            state = destination.get('state')
+            country = destination.get('country', '')
+            
+            # Build prioritized search combinations
+            search_candidates = []
+            candidate_parts = [
+                [name, location, state, country],
+                [name, state, country],
+                [name, country],
+                [name],
+                [location, state, country],
+                [location, country],
+                [location],
+                [state, country],
+                [country]
+            ]
+            
+            for parts in candidate_parts:
+                parts = [part for part in parts if part]
+                if not parts:
+                    continue
+                search_string = ", ".join(str(part) for part in parts)
+                if search_string and search_string not in search_candidates:
+                    search_candidates.append(search_string)
+            
+            # Try candidates with rate limiting (1 request per second for Nominatim free tier)
+            for search_string in search_candidates:
+                try:
+                    time.sleep(1.1)  # Respect Nominatim rate limits
+                    location_obj = geolocator.geocode(search_string, timeout=15)
+                    if location_obj:
+                        return location_obj.latitude, location_obj.longitude
+                except (GeocoderTimedOut, GeocoderServiceError):
+                    continue
+                except Exception:
+                    continue
+            
+            return None, None
+        except Exception:
+            return None, None
+    
     def _embed_destination(self, destination: Dict) -> Dict[str, np.ndarray]:
         """Generate multiple embeddings for different aspects of a destination."""
         # Helper function to safely get string values (handle None from JSON null)
@@ -135,6 +190,9 @@ class DestinationIndex:
         amenities_embeddings = []
         location_embeddings = []
         
+        # Track which destinations need geocoding (for batch processing with rate limiting)
+        destinations_to_geocode = []
+        
         for dest_file in destination_files:
             try:
                 # Load destination
@@ -142,6 +200,10 @@ class DestinationIndex:
                 
                 # Store filename for reference
                 destination["filename"] = dest_file.name
+                
+                # Check if geocoding is needed (we'll do it in batch after loading all)
+                if 'latitude' not in destination or 'longitude' not in destination:
+                    destinations_to_geocode.append((dest_file, destination))
                 
                 self.destinations.append(destination)
                 
@@ -159,6 +221,29 @@ class DestinationIndex:
             except Exception as e:
                 print(f"Warning: Skipping destination {dest_file.name} due to error: {str(e)}")
                 continue
+        
+        # Geocode destinations that need coordinates (for map display)
+        if destinations_to_geocode:
+            print(f"\n🌍 Geocoding {len(destinations_to_geocode)} destinations for map display...")
+            print("(This may take a while due to rate limiting - maps will work after this completes)")
+            for dest_file, destination in destinations_to_geocode:
+                lat, lon = self._geocode_destination(destination)
+                if lat and lon:
+                    destination['latitude'] = lat
+                    destination['longitude'] = lon
+                    # Save updated destination back to file
+                    with open(dest_file, 'w') as f:
+                        json.dump(destination, f, indent=2)
+                    # Update the destination in self.destinations (find it by filename)
+                    for dest in self.destinations:
+                        if dest.get('filename') == dest_file.name:
+                            dest['latitude'] = lat
+                            dest['longitude'] = lon
+                            break
+                    print(f"  ✓ Geocoded: {destination.get('name', dest_file.stem)}")
+                else:
+                    print(f"  ✗ Could not geocode: {destination.get('name', dest_file.stem)}")
+            print("Geocoding complete.\n")
         
         try:
             # Convert to numpy arrays
@@ -215,6 +300,22 @@ class DestinationIndex:
         # Load destinations
         with open(DESTINATIONS_PATH, 'r') as f:
             self.destinations = json.load(f)
+        
+        # Merge coordinates from original JSON files (always sync from source of truth)
+        # This ensures coordinates are always up-to-date even if index was built before coordinates were added
+        for dest in self.destinations:
+            filename = dest.get('filename')
+            if filename:
+                # Try to load coordinates from original JSON file
+                dest_file = DESTINATIONS_DIR / filename
+                if dest_file.exists():
+                    try:
+                        original_data = json.loads(dest_file.read_text())
+                        if 'latitude' in original_data and 'longitude' in original_data:
+                            dest['latitude'] = original_data['latitude']
+                            dest['longitude'] = original_data['longitude']
+                    except Exception:
+                        pass  # If we can't read the file, just continue
         
         # Load indices
         self.activities_index = faiss.read_index(str(INDEX_PATH.with_suffix('.activities.idx')))

@@ -30,7 +30,10 @@
     "visitor centers",
     "markets"
   ],
-  "best_season": ["dry season", "november to march"],
+  "best_season": [
+    "dry season",
+    "november to march"
+  ],
   "travel_time": "Flight to Siem Reap",
   "nearby_attractions": [
     "Angkor Thom",
@@ -47,6 +50,7 @@
     "unesco",
     "cultural",
     "ancient"
-  ]
+  ],
+  "latitude": 13.412437,
+  "longitude": 103.8669253
 }
-

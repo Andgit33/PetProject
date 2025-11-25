@@ -32,7 +32,10 @@
     "convenience stores",
     "onsen"
   ],
-  "best_season": ["spring", "fall"],
+  "best_season": [
+    "spring",
+    "fall"
+  ],
   "travel_time": "International flights from major cities",
   "nearby_attractions": [
     "Senso-ji Temple",
@@ -49,6 +52,7 @@
     "traditional",
     "modern",
     "asia"
-  ]
+  ],
+  "latitude": 35.6768601,
+  "longitude": 139.7638947
 }
-

@@ -32,7 +32,11 @@
     "parking",
     "observation decks"
   ],
-  "best_season": ["summer", "spring", "fall"],
+  "best_season": [
+    "summer",
+    "spring",
+    "fall"
+  ],
   "travel_time": "1.5 hours from Toronto or Buffalo",
   "nearby_attractions": [
     "Maid of the Mist",
@@ -49,6 +53,7 @@
     "powerful",
     "tourist",
     "iconic"
-  ]
+  ],
+  "latitude": 43.084841,
+  "longitude": -79.0701786
 }
-

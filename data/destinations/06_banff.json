@@ -32,7 +32,10 @@
     "ski resorts",
     "parking"
   ],
-  "best_season": ["summer", "winter"],
+  "best_season": [
+    "summer",
+    "winter"
+  ],
   "travel_time": "1.5 hours from Calgary",
   "nearby_attractions": [
     "Lake Louise",
@@ -49,6 +52,7 @@
     "wildlife",
     "scenic",
     "outdoor"
-  ]
+  ],
+  "latitude": 51.4881335,
+  "longitude": -115.9380498
 }
-

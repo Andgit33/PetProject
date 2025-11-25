@@ -30,7 +30,10 @@
     "cable cars",
     "visitor centers"
   ],
-  "best_season": ["summer", "winter"],
+  "best_season": [
+    "summer",
+    "winter"
+  ],
   "travel_time": "Train to Zermatt",
   "nearby_attractions": [
     "Zermatt",
@@ -47,6 +50,7 @@
     "skiing",
     "climbing",
     "dramatic"
-  ]
+  ],
+  "latitude": 46.3810073,
+  "longitude": 8.0346051
 }
-

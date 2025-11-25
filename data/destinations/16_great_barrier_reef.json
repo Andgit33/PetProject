@@ -31,7 +31,10 @@
     "beach facilities",
     "tour operators"
   ],
-  "best_season": ["dry season", "june to october"],
+  "best_season": [
+    "dry season",
+    "june to october"
+  ],
   "travel_time": "Flight to Cairns or Townsville",
   "nearby_attractions": [
     "Whitsunday Islands",
@@ -48,6 +51,7 @@
     "tropical",
     "islands",
     "snorkeling"
-  ]
+  ],
+  "latitude": -20.358137,
+  "longitude": 148.9521302
 }
-

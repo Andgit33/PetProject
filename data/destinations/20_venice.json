@@ -32,7 +32,10 @@
     "water taxis",
     "public transportation"
   ],
-  "best_season": ["spring", "fall"],
+  "best_season": [
+    "spring",
+    "fall"
+  ],
   "travel_time": "Flight to Venice or train from major cities",
   "nearby_attractions": [
     "St. Mark's Square",
@@ -49,6 +52,7 @@
     "historic",
     "art",
     "unique"
-  ]
+  ],
+  "latitude": 45.4371908,
+  "longitude": 12.3345898
 }
-

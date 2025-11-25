@@ -32,7 +32,10 @@
     "polo fields",
     "casinos"
   ],
-  "best_season": ["winter", "summer"],
+  "best_season": [
+    "winter",
+    "summer"
+  ],
   "travel_time": "Train from Zurich or Milan",
   "nearby_attractions": [
     "Corviglia",
@@ -49,6 +52,7 @@
     "elegant",
     "resort",
     "exclusive"
-  ]
+  ],
+  "latitude": 46.4978958,
+  "longitude": 9.8392428
 }
-

@@ -32,10 +32,13 @@
     "beach clubs",
     "water sports"
   ],
-  "best_season": ["dry season", "november to april"],
-  "travel_time": "International flights to Malé",
+  "best_season": [
+    "dry season",
+    "november to april"
+  ],
+  "travel_time": "International flights to Mal\u00e9",
   "nearby_attractions": [
-    "Malé",
+    "Mal\u00e9",
     "Various atolls",
     "Coral reefs",
     "Manta ray spots",
@@ -49,6 +52,7 @@
     "beach",
     "overwater",
     "paradise"
-  ]
+  ],
+  "latitude": 3.7203503,
+  "longitude": 73.2244152
 }
-

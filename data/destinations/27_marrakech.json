@@ -32,7 +32,10 @@
     "tour guides",
     "cafes"
   ],
-  "best_season": ["spring", "fall"],
+  "best_season": [
+    "spring",
+    "fall"
+  ],
   "travel_time": "Flight to Marrakech",
   "nearby_attractions": [
     "Jemaa el-Fnaa",
@@ -49,6 +52,7 @@
     "palaces",
     "desert",
     "vibrant"
-  ]
+  ],
+  "latitude": 31.6258257,
+  "longitude": -7.9891608
 }
-

@@ -31,7 +31,9 @@
     "dive centers",
     "water sports facilities"
   ],
-  "best_season": ["may to december"],
+  "best_season": [
+    "may to december"
+  ],
   "travel_time": "International flights to Port Louis",
   "nearby_attractions": [
     "Port Louis",
@@ -48,6 +50,7 @@
     "diving",
     "relaxation",
     "paradise"
-  ]
+  ],
+  "latitude": -20.2759451,
+  "longitude": 57.5703566
 }
-

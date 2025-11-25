@@ -3,7 +3,7 @@
   "location": "Valais",
   "state": null,
   "country": "Switzerland",
-  "description": "World-renowned ski resort in the 4 Vallées, known for challenging slopes, off-piste skiing, and vibrant après-ski scene.",
+  "description": "World-renowned ski resort in the 4 Vall\u00e9es, known for challenging slopes, off-piste skiing, and vibrant apr\u00e8s-ski scene.",
   "activities": [
     "skiing",
     "off-piste",
@@ -32,11 +32,14 @@
     "ski lifts",
     "shops"
   ],
-  "best_season": ["winter", "summer"],
+  "best_season": [
+    "winter",
+    "summer"
+  ],
   "travel_time": "Train to Martigny, then bus or taxi",
   "nearby_attractions": [
     "Mont Fort",
-    "4 Vallées",
+    "4 Vall\u00e9es",
     "La Chaux",
     "Attelas",
     "Siviez",
@@ -49,6 +52,7 @@
     "challenging",
     "vibrant",
     "world-class"
-  ]
+  ],
+  "latitude": 46.0961011,
+  "longitude": 7.2286765
 }
-

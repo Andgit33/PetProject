@@ -29,7 +29,9 @@
     "lockers",
     "massage services"
   ],
-  "best_season": ["year round"],
+  "best_season": [
+    "year round"
+  ],
   "travel_time": "20 minutes from Keflavik Airport",
   "nearby_attractions": [
     "Reykjavik",
@@ -46,6 +48,7 @@
     "wellness",
     "unique",
     "luxury"
-  ]
+  ],
+  "latitude": 63.8800486,
+  "longitude": -22.4493538
 }
-

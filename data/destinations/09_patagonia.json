@@ -31,7 +31,10 @@
     "tour operators",
     "visitor centers"
   ],
-  "best_season": ["summer", "december to march"],
+  "best_season": [
+    "summer",
+    "december to march"
+  ],
   "travel_time": "Flight to Punta Arenas or El Calafate",
   "nearby_attractions": [
     "Torres del Paine",
@@ -48,6 +51,7 @@
     "wilderness",
     "adventure",
     "remote"
-  ]
+  ],
+  "latitude": -38.9602535,
+  "longitude": -68.0619779
 }
-

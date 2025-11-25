@@ -3,7 +3,7 @@
   "location": "Bernese Oberland",
   "state": null,
   "country": "Switzerland",
-  "description": "Charming alpine village surrounded by the Eiger, Mönch, and Jungfrau peaks. A paradise for hiking, skiing, and mountain lovers.",
+  "description": "Charming alpine village surrounded by the Eiger, M\u00f6nch, and Jungfrau peaks. A paradise for hiking, skiing, and mountain lovers.",
   "activities": [
     "hiking",
     "skiing",
@@ -15,7 +15,7 @@
   ],
   "scenery": [
     "eiger",
-    "mönch",
+    "m\u00f6nch",
     "jungfrau",
     "alpine meadows",
     "glaciers",
@@ -30,7 +30,10 @@
     "ski lifts",
     "shops"
   ],
-  "best_season": ["summer", "winter"],
+  "best_season": [
+    "summer",
+    "winter"
+  ],
   "travel_time": "Train from Interlaken",
   "nearby_attractions": [
     "Eiger",
@@ -47,6 +50,7 @@
     "charming",
     "skiing",
     "scenic"
-  ]
+  ],
+  "latitude": 46.6242733,
+  "longitude": 8.0367462
 }
-
