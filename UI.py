@@ -383,60 +383,131 @@ if st.button("🔍 Find Destinations", type="primary"):
                                     unsafe_allow_html=True
                                 )
                         
-                        # Enhanced visual chart for dimension scores
+                        # Weighted contributions visualization - shows how each dimension contributed to final score
+                        st.markdown("#### 🎯 Weighted Contributions to Final Score")
+                        st.caption("How each dimension contributed after applying your weight preferences")
+                        
                         dimensions = ['Activities', 'Scenery', 'Amenities', 'Location']
-                        scores = [
+                        raw_scores = [
                             result['activities_score'],
                             result['scenery_score'],
                             result['amenities_score'],
                             result['location_score']
                         ]
-                        colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']
+                        weights = [
+                            st.session_state.activities_weight,
+                            st.session_state.scenery_weight,
+                            st.session_state.amenities_weight,
+                            st.session_state.location_weight
+                        ]
+                        # Normalize weights
+                        total_weight = sum(weights)
+                        if total_weight > 0:
+                            weights = [w / total_weight for w in weights]
                         
-                        # Horizontal bar chart for better readability
+                        # Calculate weighted contributions
+                        weighted_contributions = [w * s for w, s in zip(weights, raw_scores)]
+                        colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']
+                        icons = ['🎯', '🏔️', '🏨', '📍']
+                        
+                        # Visual cards showing contributions
+                        contrib_cols = st.columns(4)
+                        for idx, (dim, contribution, weight, raw_score, color, icon) in enumerate(zip(dimensions, weighted_contributions, weights, raw_scores, colors, icons)):
+                            with contrib_cols[idx]:
+                                contribution_pct = (contribution / sum(weighted_contributions) * 100) if sum(weighted_contributions) > 0 else 0
+                                st.markdown(
+                                    f"""
+                                    <div style="background: linear-gradient(135deg, {color}22, {color}11); 
+                                    padding: 20px; border-radius: 12px; border-left: 5px solid {color}; 
+                                    text-align: center; margin-bottom: 10px;">
+                                        <div style="font-size: 2.5em; margin-bottom: 5px;">{icon}</div>
+                                        <div style="font-size: 1.1em; font-weight: bold; color: #333; margin-bottom: 8px;">{dim}</div>
+                                        <div style="font-size: 2em; font-weight: bold; color: {color}; margin: 10px 0;">
+                                            {contribution:.3f}
+                                        </div>
+                                        <div style="font-size: 0.9em; color: #666; margin-top: 5px;">
+                                            {contribution_pct:.1f}% of total
+                                        </div>
+                                        <div style="font-size: 0.85em; color: #888; margin-top: 8px; padding-top: 8px; border-top: 1px solid #ddd;">
+                                            Score: {raw_score:.2f}<br>
+                                            Weight: {weight:.2f}
+                                        </div>
+                                    </div>
+                                    """,
+                                    unsafe_allow_html=True
+                                )
+                        
+                        # Enhanced horizontal bar chart with larger text and annotations
                         fig = go.Figure()
-                        for dim, score, color in zip(dimensions, scores, colors):
+                        max_contribution = max(weighted_contributions) if weighted_contributions else 1
+                        
+                        for dim, contribution, weight, raw_score, color in zip(dimensions, weighted_contributions, weights, raw_scores, colors):
+                            # Main contribution bar
                             fig.add_trace(go.Bar(
                                 name=dim,
-                                x=[score],
+                                x=[contribution],
                                 y=[dim],
                                 orientation='h',
                                 marker=dict(
                                     color=color,
-                                    line=dict(color='white', width=2)
+                                    line=dict(color='white', width=3),
+                                    opacity=0.85
                                 ),
-                                text=[f"{score:.2f}"],
+                                text=[f"<b>{contribution:.3f}</b>"],
                                 textposition='inside',
-                                textfont=dict(color='white', size=14, family='Arial Black')
+                                textfont=dict(color='white', size=18, family='Arial Black')
                             ))
+                            
+                            # Add annotation outside bar for formula
+                            fig.add_annotation(
+                                x=contribution + max_contribution * 0.05,
+                                y=dim,
+                                text=f"<b>{raw_score:.2f}</b> × <b>{weight:.2f}</b>",
+                                showarrow=False,
+                                font=dict(size=14, color='#333', family='Arial'),
+                                bgcolor='rgba(255,255,255,0.8)',
+                                bordercolor=color,
+                                borderwidth=2,
+                                borderpad=4
+                            )
                         
                         fig.update_layout(
                             title=dict(
-                                text="<b>Dimension Similarity Scores</b>",
-                                font=dict(size=18, color='#333')
+                                text="<b>Contribution Breakdown</b>",
+                                font=dict(size=20, color='#333', family='Arial Black'),
+                                x=0.5,
+                                xanchor='center'
                             ),
                             xaxis=dict(
-                                title="Similarity Score",
-                                range=[0, 1],
-                                tickformat='.2f'
+                                title=dict(
+                                    text="<b>Contribution to Final Score</b>",
+                                    font=dict(size=14, color='#666')
+                                ),
+                                range=[0, max_contribution * 1.4 if max_contribution > 0 else 1],
+                                tickformat='.3f',
+                                tickfont=dict(size=12)
                             ),
-                            yaxis=dict(title=""),
-                            height=300,
+                            yaxis=dict(
+                                title="",
+                                tickfont=dict(size=14, color='#333')
+                            ),
+                            height=350,
                             barmode='group',
                             showlegend=False,
                             plot_bgcolor='rgba(0,0,0,0)',
                             paper_bgcolor='rgba(0,0,0,0)',
-                            margin=dict(l=20, r=20, t=50, b=20)
+                            margin=dict(l=120, r=200, t=60, b=40)
                         )
                         st.plotly_chart(fig, use_container_width=True)
-                        
+
                         # Radial/Donut chart for overall score visualization
+                        # Use result['score'] directly to ensure we use the correct overall weighted score
+                        overall_score = result['score']
                         fig_radial = go.Figure(go.Indicator(
-                            mode="gauge+number+delta",
-                            value=score * 100,
+                            mode="gauge+number",
+                            value=overall_score * 100,
                             domain={'x': [0, 1], 'y': [0, 1]},
                             title={'text': "Overall Match Score", 'font': {'size': 20}},
-                            delta={'reference': 50},
                             gauge={
                                 'axis': {'range': [None, 100]},
                                 'bar': {'color': score_color},
