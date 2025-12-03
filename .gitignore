@@ -34,7 +34,7 @@ wheels/
 
 # Data
 data/derived/
-cache/
+# cache/ - removed to include model files for deployment
 models/
 
 # Environment
