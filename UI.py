@@ -654,11 +654,24 @@ if st.button("🔍 Find Destinations", type="primary"):
                     st.error("No destination files found! Please ensure destination JSON files are in the data/destinations directory.")
                 else:
                     st.error(f"Error: {str(e)}")
+            except RuntimeError as e:
+                # Handle model initialization errors specifically
+                error_msg = str(e)
+                if "Failed to initialize model" in error_msg:
+                    st.error("❌ Failed to initialize the AI model. This may be due to missing model files or network issues.")
+                    st.info("💡 If this is a deployment, ensure the cache directory with model files is included. If the error persists, the model may need to be re-downloaded.")
+                else:
+                    st.error(f"Runtime error: {error_msg}")
+                logger.exception("Streamlit search failed - RuntimeError")
             except Exception as e:
                 # Show user-friendly error message without exposing stack trace
                 error_msg = str(e)
+                # Check for model initialization errors first (even if they contain "path")
+                if "Failed to initialize model" in error_msg or "model" in error_msg.lower() and ("429" in error_msg or "too many requests" in error_msg.lower() or "download" in error_msg.lower()):
+                    st.error("❌ Failed to initialize the AI model. This may be due to missing model files or network issues.")
+                    st.info("💡 If this is a deployment, ensure the cache directory with model files is included. If the error persists, the model may need to be re-downloaded.")
                 # Sanitize error messages to avoid exposing sensitive paths
-                if "mount" in error_msg.lower() or "path" in error_msg.lower():
+                elif "mount" in error_msg.lower() or "path" in error_msg.lower():
                     st.error("An error occurred while processing your request. Please try again or contact support if the issue persists.")
                 else:
                     st.error(f"An error occurred: {error_msg}")
