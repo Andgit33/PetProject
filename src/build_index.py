@@ -7,6 +7,7 @@ from typing import List, Dict, Optional
 import torch
 import gc
 import time
+import os
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 from src.config import (
@@ -14,7 +15,8 @@ from src.config import (
     DERIVED_DIR,
     DEFAULT_EMBEDDING_MODEL,
     INDEX_PATH,
-    DESTINATIONS_PATH
+    DESTINATIONS_PATH,
+    BASE_DIR
 )
 
 class DestinationIndex:
@@ -33,12 +35,56 @@ class DestinationIndex:
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
             
-            self.model = SentenceTransformer(
-                self.model_path,
-                device='cpu',
-                cache_folder='./cache',
-                use_auth_token=False
-            )
+            # Use absolute path for cache folder
+            cache_dir = BASE_DIR / "cache"
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Check if model exists in cache
+            # SentenceTransformer stores models in cache/sentence-transformers_<model_name>/
+            # or cache/sentence-transformers/<model_name>/
+            model_name = self.model_path.replace("sentence-transformers/", "")
+            model_cache_paths = [
+                cache_dir / "sentence-transformers" / model_name,
+                cache_dir / f"sentence-transformers_{model_name}",
+                cache_dir / model_name
+            ]
+            
+            # Find the actual model path if it exists locally
+            local_model_path = None
+            for model_path in model_cache_paths:
+                if model_path.exists() and model_path.is_dir():
+                    # Check if it contains model files (config.json, modules.json, etc.)
+                    required_files = ["config.json", "modules.json"]
+                    if any((model_path / f).exists() for f in required_files):
+                        local_model_path = str(model_path.absolute())  # Use absolute path
+                        break
+            
+            # If model exists locally, use it directly and set environment variable to prevent downloads
+            original_hf_offline = os.environ.get("HF_HUB_OFFLINE")
+            if local_model_path:
+                # Set environment variable to prevent HuggingFace Hub from downloading
+                # This prevents any network requests even for missing dependencies
+                os.environ["HF_HUB_OFFLINE"] = "1"
+                model_to_load = local_model_path
+            else:
+                # Model not found locally, allow download but use cache folder
+                os.environ.pop("HF_HUB_OFFLINE", None)  # Ensure it's not set
+                model_to_load = self.model_path
+            
+            try:
+                self.model = SentenceTransformer(
+                    model_to_load,
+                    device='cpu',
+                    cache_folder=str(cache_dir),
+                    use_auth_token=False
+                )
+            finally:
+                # Restore original HF_HUB_OFFLINE value after loading
+                if local_model_path:
+                    if original_hf_offline is None:
+                        os.environ.pop("HF_HUB_OFFLINE", None)
+                    else:
+                        os.environ["HF_HUB_OFFLINE"] = original_hf_offline
             
             self.model.eval()
             
@@ -47,6 +93,8 @@ class DestinationIndex:
                 
             return
         except Exception as e:
+            # Reset environment variable on error
+            os.environ.pop("HF_HUB_OFFLINE", None)
             raise RuntimeError(f"Failed to initialize model: {str(e)}")
     
     def _embed_text(self, text: str) -> np.ndarray:
