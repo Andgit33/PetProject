@@ -176,7 +176,7 @@ def get_country_options():
 
 
 # --- Filters ---
-st.header("🔍 Filters")
+st.header("🔍 Filters (To Be Used After Results Are Displayed)")
 
 dynamic_countries = get_country_options()
 fallback_countries = [
